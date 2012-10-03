@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE0ABB3A1614386C00C6FA8F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0ABB391614386C00C6FA8F /* SenTestingKit.framework */; };
+		EE0ABB3B1614386C00C6FA8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256615E7336800E9B704 /* UIKit.framework */; };
+		EE0ABB3C1614386C00C6FA8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256815E7336800E9B704 /* Foundation.framework */; };
+		EE0ABB421614386C00C6FA8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE0ABB401614386C00C6FA8F /* InfoPlist.strings */; };
+		EE0ABB451614386C00C6FA8F /* DateUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ABB441614386C00C6FA8F /* DateUtilTests.m */; };
+		EE0ABB4E1614590D00C6FA8F /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */; };
+		EE0ABB501615814300C6FA8F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0ABB4F1615814300C6FA8F /* icon.png */; };
+		EE0ABB52161AC13800C6FA8F /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0ABB51161AC13800C6FA8F /* iTunesArtwork.png */; };
+		EE1D731915E8C2A400CEF7C5 /* DecisionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1D731815E8C2A400CEF7C5 /* DecisionTableViewCell.xib */; };
+		EE1D731D15E8C40500CEF7C5 /* DecisionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D731C15E8C40500CEF7C5 /* DecisionTableViewCell.m */; };
+		EE1D732215E9181200CEF7C5 /* thumbs-down-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1D731E15E9181200CEF7C5 /* thumbs-down-selected.png */; };
+		EE1D732315E9181200CEF7C5 /* thumbs-down.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1D731F15E9181200CEF7C5 /* thumbs-down.png */; };
+		EE1D732415E9181200CEF7C5 /* thumbs-up-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1D732015E9181200CEF7C5 /* thumbs-up-selected.png */; };
+		EE1D732515E9181200CEF7C5 /* thumbs-up.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1D732115E9181200CEF7C5 /* thumbs-up.png */; };
+		EE1D732915EA478400CEF7C5 /* DecisionOnADay.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732815EA478400CEF7C5 /* DecisionOnADay.m */; };
+		EE1D732C15EDA63700CEF7C5 /* FilePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732B15EDA63700CEF7C5 /* FilePersistence.m */; };
+		EE1D732F15EE15FC00CEF7C5 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */; };
+		EEBC256715E7336800E9B704 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256615E7336800E9B704 /* UIKit.framework */; };
+		EEBC256915E7336800E9B704 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256815E7336800E9B704 /* Foundation.framework */; };
+		EEBC256B15E7336800E9B704 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256A15E7336800E9B704 /* CoreGraphics.framework */; };
+		EEBC257115E7336800E9B704 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEBC256F15E7336800E9B704 /* InfoPlist.strings */; };
+		EEBC257315E7336800E9B704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC257215E7336800E9B704 /* main.m */; };
+		EEBC257715E7336800E9B704 /* DecisionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC257615E7336800E9B704 /* DecisionAppDelegate.m */; };
+		EEBC257A15E7336800E9B704 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBC257815E7336800E9B704 /* MainStoryboard.storyboard */; };
+		EEBC257D15E7336800E9B704 /* AddDecisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC257C15E7336800E9B704 /* AddDecisionViewController.m */; };
+		EEBEC36A15E77C7700D60DF5 /* DecisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */; };
+		EEBEC36E15E77D3B00D60DF5 /* Decision.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBEC36D15E77D3B00D60DF5 /* Decision.m */; };
+		EEC93D8615F244220009DF91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8515F244220009DF91 /* MapKit.framework */; };
+		EEC93D8815F2442E0009DF91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8715F2442E0009DF91 /* QuartzCore.framework */; };
+		EEC93D8B15F24A4A0009DF91 /* DDayAttributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */; };
+		EEC93D9315F24F7F0009DF91 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */; };
+		EEC93D9C15F250120009DF91 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */; };
+		EEF4A02A15E7AF95009909A8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF4A02915E7AF95009909A8 /* LoginViewController.m */; };
+		EEF5D70415F5CDB900151E6B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */; };
+		EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEF5D70515F5CE4700151E6B /* FacebookSDKResources.bundle */; };
+		EEF5D70915F6221900151E6B /* PostToFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF5D70815F6221900151E6B /* PostToFacebookViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEC93D9615F24F800009DF91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		EEC93D9815F24F800009DF91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
+			remoteInfo = LogicTests;
+		};
+		EEC93D9A15F250080009DF91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE0ABB381614386C00C6FA8F /* DecisionBuddyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecisionBuddyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0ABB391614386C00C6FA8F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		EE0ABB3F1614386C00C6FA8F /* DecisionBuddyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DecisionBuddyTests-Info.plist"; sourceTree = "<group>"; };
+		EE0ABB411614386C00C6FA8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE0ABB431614386C00C6FA8F /* DateUtilTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtilTests.h; sourceTree = "<group>"; };
+		EE0ABB441614386C00C6FA8F /* DateUtilTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtilTests.m; sourceTree = "<group>"; };
+		EE0ABB461614386C00C6FA8F /* DecisionBuddyTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecisionBuddyTests-Prefix.pch"; sourceTree = "<group>"; };
+		EE0ABB4F1615814300C6FA8F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		EE0ABB51161AC13800C6FA8F /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		EE1D731815E8C2A400CEF7C5 /* DecisionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DecisionTableViewCell.xib; sourceTree = "<group>"; };
+		EE1D731B15E8C40500CEF7C5 /* DecisionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionTableViewCell.h; sourceTree = "<group>"; };
+		EE1D731C15E8C40500CEF7C5 /* DecisionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionTableViewCell.m; sourceTree = "<group>"; };
+		EE1D731E15E9181200CEF7C5 /* thumbs-down-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbs-down-selected.png"; sourceTree = "<group>"; };
+		EE1D731F15E9181200CEF7C5 /* thumbs-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbs-down.png"; sourceTree = "<group>"; };
+		EE1D732015E9181200CEF7C5 /* thumbs-up-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbs-up-selected.png"; sourceTree = "<group>"; };
+		EE1D732115E9181200CEF7C5 /* thumbs-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbs-up.png"; sourceTree = "<group>"; };
+		EE1D732715EA478400CEF7C5 /* DecisionOnADay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionOnADay.h; sourceTree = "<group>"; };
+		EE1D732815EA478400CEF7C5 /* DecisionOnADay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionOnADay.m; sourceTree = "<group>"; };
+		EE1D732A15EDA63700CEF7C5 /* FilePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePersistence.h; sourceTree = "<group>"; };
+		EE1D732B15EDA63700CEF7C5 /* FilePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePersistence.m; sourceTree = "<group>"; };
+		EE1D732D15EE15FC00CEF7C5 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		EEBC256215E7336800E9B704 /* DecisionBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisionBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEBC256615E7336800E9B704 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EEBC256815E7336800E9B704 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEBC256A15E7336800E9B704 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EEBC256E15E7336800E9B704 /* DecisionBuddy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DecisionBuddy-Info.plist"; sourceTree = "<group>"; };
+		EEBC257015E7336800E9B704 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EEBC257215E7336800E9B704 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEBC257415E7336800E9B704 /* DecisionBuddy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecisionBuddy-Prefix.pch"; sourceTree = "<group>"; };
+		EEBC257515E7336800E9B704 /* DecisionAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecisionAppDelegate.h; sourceTree = "<group>"; };
+		EEBC257615E7336800E9B704 /* DecisionAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecisionAppDelegate.m; sourceTree = "<group>"; };
+		EEBC257915E7336800E9B704 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		EEBC257B15E7336800E9B704 /* AddDecisionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDecisionViewController.h; sourceTree = "<group>"; };
+		EEBC257C15E7336800E9B704 /* AddDecisionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddDecisionViewController.m; sourceTree = "<group>"; };
+		EEBEC36815E77C7700D60DF5 /* DecisionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionTableViewController.h; sourceTree = "<group>"; };
+		EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionTableViewController.m; sourceTree = "<group>"; };
+		EEBEC36C15E77D3B00D60DF5 /* Decision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decision.h; sourceTree = "<group>"; };
+		EEBEC36D15E77D3B00D60DF5 /* Decision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Decision.m; sourceTree = "<group>"; };
+		EEC93D8515F244220009DF91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EEC93D8715F2442E0009DF91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EEC93D8915F24A4A0009DF91 /* DDayAttributionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDayAttributionViewController.h; sourceTree = "<group>"; };
+		EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDayAttributionViewController.m; sourceTree = "<group>"; };
+		EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../gitspace/cal/tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../gitspace/cal/tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		EEF4A02815E7AF95009909A8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EEF4A02915E7AF95009909A8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		EEF5D70515F5CE4700151E6B /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		EEF5D70715F6221900151E6B /* PostToFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostToFacebookViewController.h; sourceTree = "<group>"; };
+		EEF5D70815F6221900151E6B /* PostToFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostToFacebookViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE0ABB341614386C00C6FA8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0ABB3A1614386C00C6FA8F /* SenTestingKit.framework in Frameworks */,
+				EE0ABB3B1614386C00C6FA8F /* UIKit.framework in Frameworks */,
+				EE0ABB3C1614386C00C6FA8F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEBC255F15E7336800E9B704 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEC93D9C15F250120009DF91 /* libTapkuLibrary.a in Frameworks */,
+				EEC93D8815F2442E0009DF91 /* QuartzCore.framework in Frameworks */,
+				EEC93D8615F244220009DF91 /* MapKit.framework in Frameworks */,
+				EEBC256715E7336800E9B704 /* UIKit.framework in Frameworks */,
+				EEBC256915E7336800E9B704 /* Foundation.framework in Frameworks */,
+				EEBC256B15E7336800E9B704 /* CoreGraphics.framework in Frameworks */,
+				EEF5D70415F5CDB900151E6B /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE0ABB3D1614386C00C6FA8F /* DecisionBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ABB431614386C00C6FA8F /* DateUtilTests.h */,
+				EE0ABB441614386C00C6FA8F /* DateUtilTests.m */,
+				EE0ABB3E1614386C00C6FA8F /* Supporting Files */,
+			);
+			path = DecisionBuddyTests;
+			sourceTree = "<group>";
+		};
+		EE0ABB3E1614386C00C6FA8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ABB3F1614386C00C6FA8F /* DecisionBuddyTests-Info.plist */,
+				EE0ABB401614386C00C6FA8F /* InfoPlist.strings */,
+				EE0ABB461614386C00C6FA8F /* DecisionBuddyTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE1D732615E918C400CEF7C5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EE1D731E15E9181200CEF7C5 /* thumbs-down-selected.png */,
+				EE1D731F15E9181200CEF7C5 /* thumbs-down.png */,
+				EE1D732015E9181200CEF7C5 /* thumbs-up-selected.png */,
+				EE1D732115E9181200CEF7C5 /* thumbs-up.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		EEBC255715E7336800E9B704 = {
+			isa = PBXGroup;
+			children = (
+				EEC93D8715F2442E0009DF91 /* QuartzCore.framework */,
+				EEC93D8515F244220009DF91 /* MapKit.framework */,
+				EEBC256C15E7336800E9B704 /* DecisionBuddy */,
+				EE0ABB3D1614386C00C6FA8F /* DecisionBuddyTests */,
+				EEBC256515E7336800E9B704 /* Frameworks */,
+				EEBC256315E7336800E9B704 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEBC256315E7336800E9B704 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEBC256215E7336800E9B704 /* DecisionBuddy.app */,
+				EE0ABB381614386C00C6FA8F /* DecisionBuddyTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEBC256515E7336800E9B704 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEF5D70515F5CE4700151E6B /* FacebookSDKResources.bundle */,
+				EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */,
+				EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */,
+				EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */,
+				EEBC256615E7336800E9B704 /* UIKit.framework */,
+				EEBC256815E7336800E9B704 /* Foundation.framework */,
+				EEBC256A15E7336800E9B704 /* CoreGraphics.framework */,
+				EE0ABB391614386C00C6FA8F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEBC256C15E7336800E9B704 /* DecisionBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ABB51161AC13800C6FA8F /* iTunesArtwork.png */,
+				EE1D732D15EE15FC00CEF7C5 /* DateUtil.h */,
+				EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */,
+				EE1D732A15EDA63700CEF7C5 /* FilePersistence.h */,
+				EE1D732B15EDA63700CEF7C5 /* FilePersistence.m */,
+				EE1D732715EA478400CEF7C5 /* DecisionOnADay.h */,
+				EE1D732815EA478400CEF7C5 /* DecisionOnADay.m */,
+				EE1D731815E8C2A400CEF7C5 /* DecisionTableViewCell.xib */,
+				EE1D731B15E8C40500CEF7C5 /* DecisionTableViewCell.h */,
+				EE1D731C15E8C40500CEF7C5 /* DecisionTableViewCell.m */,
+				EEF4A02815E7AF95009909A8 /* LoginViewController.h */,
+				EEF4A02915E7AF95009909A8 /* LoginViewController.m */,
+				EEBC257515E7336800E9B704 /* DecisionAppDelegate.h */,
+				EEBC257615E7336800E9B704 /* DecisionAppDelegate.m */,
+				EEBEC36C15E77D3B00D60DF5 /* Decision.h */,
+				EEBEC36D15E77D3B00D60DF5 /* Decision.m */,
+				EEBEC36815E77C7700D60DF5 /* DecisionTableViewController.h */,
+				EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */,
+				EEBC257815E7336800E9B704 /* MainStoryboard.storyboard */,
+				EEF5D70715F6221900151E6B /* PostToFacebookViewController.h */,
+				EEF5D70815F6221900151E6B /* PostToFacebookViewController.m */,
+				EEC93D8915F24A4A0009DF91 /* DDayAttributionViewController.h */,
+				EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */,
+				EEBC257B15E7336800E9B704 /* AddDecisionViewController.h */,
+				EEBC257C15E7336800E9B704 /* AddDecisionViewController.m */,
+				EEBC256D15E7336800E9B704 /* Supporting Files */,
+			);
+			path = DecisionBuddy;
+			sourceTree = "<group>";
+		};
+		EEBC256D15E7336800E9B704 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE1D732615E918C400CEF7C5 /* images */,
+				EEBC256E15E7336800E9B704 /* DecisionBuddy-Info.plist */,
+				EEBC256F15E7336800E9B704 /* InfoPlist.strings */,
+				EE0ABB4F1615814300C6FA8F /* icon.png */,
+				EEBC257215E7336800E9B704 /* main.m */,
+				EEBC257415E7336800E9B704 /* DecisionBuddy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEC93D8E15F24F7F0009DF91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */,
+				EEC93D9915F24F800009DF91 /* LogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE0ABB371614386C00C6FA8F /* DecisionBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE0ABB471614386C00C6FA8F /* Build configuration list for PBXNativeTarget "DecisionBuddyTests" */;
+			buildPhases = (
+				EE0ABB331614386C00C6FA8F /* Sources */,
+				EE0ABB341614386C00C6FA8F /* Frameworks */,
+				EE0ABB351614386C00C6FA8F /* Resources */,
+				EE0ABB361614386C00C6FA8F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DecisionBuddyTests;
+			productName = DecisionBuddyTests;
+			productReference = EE0ABB381614386C00C6FA8F /* DecisionBuddyTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EEBC256115E7336800E9B704 /* DecisionBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEBC258015E7336800E9B704 /* Build configuration list for PBXNativeTarget "DecisionBuddy" */;
+			buildPhases = (
+				EEBC255E15E7336800E9B704 /* Sources */,
+				EEBC255F15E7336800E9B704 /* Frameworks */,
+				EEBC256015E7336800E9B704 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEC93D9B15F250080009DF91 /* PBXTargetDependency */,
+			);
+			name = DecisionBuddy;
+			productName = DecisionBuddy;
+			productReference = EEBC256215E7336800E9B704 /* DecisionBuddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEBC255915E7336800E9B704 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Decision;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Elango Balusamy";
+			};
+			buildConfigurationList = EEBC255C15E7336800E9B704 /* Build configuration list for PBXProject "DecisionBuddy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEBC255715E7336800E9B704;
+			productRefGroup = EEBC256315E7336800E9B704 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EEC93D8E15F24F7F0009DF91 /* Products */;
+					ProjectRef = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				EEBC256115E7336800E9B704 /* DecisionBuddy */,
+				EE0ABB371614386C00C6FA8F /* DecisionBuddyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = EEC93D9615F24F800009DF91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEC93D9915F24F800009DF91 /* LogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LogicTests.octest;
+			remoteRef = EEC93D9815F24F800009DF91 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE0ABB351614386C00C6FA8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0ABB421614386C00C6FA8F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEBC256015E7336800E9B704 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEBC257115E7336800E9B704 /* InfoPlist.strings in Resources */,
+				EEBC257A15E7336800E9B704 /* MainStoryboard.storyboard in Resources */,
+				EE1D731915E8C2A400CEF7C5 /* DecisionTableViewCell.xib in Resources */,
+				EE1D732215E9181200CEF7C5 /* thumbs-down-selected.png in Resources */,
+				EE1D732315E9181200CEF7C5 /* thumbs-down.png in Resources */,
+				EE1D732415E9181200CEF7C5 /* thumbs-up-selected.png in Resources */,
+				EE1D732515E9181200CEF7C5 /* thumbs-up.png in Resources */,
+				EEC93D9315F24F7F0009DF91 /* TapkuLibrary.bundle in Resources */,
+				EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */,
+				EE0ABB501615814300C6FA8F /* icon.png in Resources */,
+				EE0ABB52161AC13800C6FA8F /* iTunesArtwork.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE0ABB361614386C00C6FA8F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE0ABB331614386C00C6FA8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0ABB4E1614590D00C6FA8F /* DateUtil.m in Sources */,
+				EE0ABB451614386C00C6FA8F /* DateUtilTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEBC255E15E7336800E9B704 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEBC257315E7336800E9B704 /* main.m in Sources */,
+				EEBC257715E7336800E9B704 /* DecisionAppDelegate.m in Sources */,
+				EEBC257D15E7336800E9B704 /* AddDecisionViewController.m in Sources */,
+				EEBEC36A15E77C7700D60DF5 /* DecisionTableViewController.m in Sources */,
+				EEBEC36E15E77D3B00D60DF5 /* Decision.m in Sources */,
+				EEF4A02A15E7AF95009909A8 /* LoginViewController.m in Sources */,
+				EE1D731D15E8C40500CEF7C5 /* DecisionTableViewCell.m in Sources */,
+				EE1D732915EA478400CEF7C5 /* DecisionOnADay.m in Sources */,
+				EE1D732C15EDA63700CEF7C5 /* FilePersistence.m in Sources */,
+				EE1D732F15EE15FC00CEF7C5 /* DateUtil.m in Sources */,
+				EEC93D8B15F24A4A0009DF91 /* DDayAttributionViewController.m in Sources */,
+				EEF5D70915F6221900151E6B /* PostToFacebookViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEC93D9B15F250080009DF91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = EEC93D9A15F250080009DF91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE0ABB401614386C00C6FA8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE0ABB411614386C00C6FA8F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EEBC256F15E7336800E9B704 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEBC257015E7336800E9B704 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EEBC257815E7336800E9B704 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEBC257915E7336800E9B704 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE0ABB481614386C00C6FA8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DecisionBuddyTests/DecisionBuddyTests-Prefix.pch";
+				INFOPLIST_FILE = "DecisionBuddyTests/DecisionBuddyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EE0ABB491614386C00C6FA8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DecisionBuddyTests/DecisionBuddyTests-Prefix.pch";
+				INFOPLIST_FILE = "DecisionBuddyTests/DecisionBuddyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		EEBC257E15E7336800E9B704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EEBC257F15E7336800E9B704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEBC258115E7336800E9B704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DecisionBuddy/DecisionBuddy-Prefix.pch";
+				HEADER_SEARCH_PATHS = /Users/elangobalusamy/gitspace/cal/tapkulibrary/src;
+				INFOPLIST_FILE = "DecisionBuddy/DecisionBuddy-Info.plist";
+				New_Setting = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-lsqlite3.0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EEBC258215E7336800E9B704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DecisionBuddy/DecisionBuddy-Prefix.pch";
+				HEADER_SEARCH_PATHS = /Users/elangobalusamy/gitspace/cal/tapkulibrary/src;
+				INFOPLIST_FILE = "DecisionBuddy/DecisionBuddy-Info.plist";
+				New_Setting = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-lsqlite3.0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE0ABB471614386C00C6FA8F /* Build configuration list for PBXNativeTarget "DecisionBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE0ABB481614386C00C6FA8F /* Debug */,
+				EE0ABB491614386C00C6FA8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEBC255C15E7336800E9B704 /* Build configuration list for PBXProject "DecisionBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEBC257E15E7336800E9B704 /* Debug */,
+				EEBC257F15E7336800E9B704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEBC258015E7336800E9B704 /* Build configuration list for PBXNativeTarget "DecisionBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEBC258115E7336800E9B704 /* Debug */,
+				EEBC258215E7336800E9B704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEBC255915E7336800E9B704 /* Project object */;
+}

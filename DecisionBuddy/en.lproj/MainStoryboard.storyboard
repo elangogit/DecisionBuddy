@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E2617" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="F7l-48-Ged">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller - Home-->
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MND-y3-puG">
+                                <rect key="frame" x="63" y="145" width="204" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="I want to take a decision">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="afterLogin" destination="2" eventType="touchUpInside" id="lez-lH-NlD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tNr-BX-o84">
+                                <rect key="frame" x="63" y="42" width="204" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login to Facebook">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ybE-Nh-ylh">
+                                <rect key="frame" x="63" y="42" width="204" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login to Facebook">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fgp-xc-D4t">
+                                <rect key="frame" x="63" y="42" width="204" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login to Facebook">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookAction:" destination="2" eventType="touchUpInside" id="7FM-hC-EYe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="NxE-ug-D0g"/>
+                    <connections>
+                        <outlet property="facebookLogin" destination="Fgp-xc-D4t" id="Hya-cZ-I42"/>
+                        <outlet property="login" destination="MND-y3-puG" id="VLd-81-b4D"/>
+                        <segue destination="VC8-Kt-gVe" kind="push" identifier="decisionSegue" id="X05-J2-Ers"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="794" y="-473"/>
+        </scene>
+        <!--Decision Table View Controller - Decisions-->
+        <scene sceneID="OwP-YF-nOu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJd-WM-a66" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="VC8-Kt-gVe" customClass="DecisionTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="16L-qD-RtF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="VC8-Kt-gVe" id="KOl-tG-ReW"/>
+                            <outlet property="delegate" destination="VC8-Kt-gVe" id="mDa-US-PG7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Decisions" id="Epq-JZ-azb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X3b-J1-33s">
+                            <connections>
+                                <segue destination="8Er-VS-Zn1" kind="modal" identifier="addDecisionSegue" id="fZb-e6-dYw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Kk7-2i-TwX" kind="push" identifier="showDecisionResultSegue" id="foc-Hd-hGe"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1295" y="-473"/>
+        </scene>
+        <!--Day Attribution View Controller - Your Decision-->
+        <scene sceneID="dOB-hc-7ms">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rP4-Kc-9cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Kk7-2i-TwX" customClass="DDayAttributionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WHG-fg-ZAP">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Decision" id="ba9-Fp-eFJ"/>
+                    <connections>
+                        <segue destination="Hrb-GH-NKy" kind="push" identifier="postToFacebook" id="bfT-yQ-Gft"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1756" y="-342"/>
+        </scene>
+        <!--Post To Facebook View Controller - Share-->
+        <scene sceneID="Xdb-qV-HNb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0U-Md-NWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Hrb-GH-NKy" customClass="PostToFacebookViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Y2-PT-qVb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hhg-AG-iou">
+                                <rect key="frame" x="217" y="142" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postTouched" destination="Hrb-GH-NKy" eventType="touchUpInside" id="KqM-ny-fcv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I decided to go to Chennai after thinking about it for 4 days" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" id="3pa-1t-k2a">
+                                <rect key="frame" x="40" y="34" width="249" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Share" id="M7Y-eu-78O"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="3pa-1t-k2a" id="OYR-Ul-H4z"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2224" y="-337"/>
+        </scene>
+        <!--Add Decision View Controller - New Decision-->
+        <scene sceneID="UoG-1B-nys">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMX-pQ-n0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="5ae-Fa-IrB" customClass="AddDecisionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AdO-cL-a3a">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Should i ..." minimumFontSize="17" id="gzK-Qb-bvs">
+                                <rect key="frame" x="37" y="52" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5ae-Fa-IrB" id="C9N-g1-bIK"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Odd no of days 1,3,5,7..." minimumFontSize="17" id="8SA-6g-xfm">
+                                <rect key="frame" x="37" y="124" width="168" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5ae-Fa-IrB" id="Ffw-Gz-ctg"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="v7e-kD-hBb">
+                                <rect key="frame" x="37" y="181" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="q3Z-FX-WEt">
+                                <rect key="frame" x="98" y="173" width="36" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="thumbs-up.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="thumbs-up-selected.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleBias" destination="5ae-Fa-IrB" eventType="touchUpInside" id="h03-AU-l9Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What to Decide" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="LMB-Dn-SQr">
+                                <rect key="frame" x="37" y="23" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="In how many days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="5nj-z4-WGa">
+                                <rect key="frame" x="37" y="95" width="153" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Decision" id="nvb-JU-xmR">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wIU-JR-NSt">
+                            <connections>
+                                <action selector="cancelDecision:" destination="5ae-Fa-IrB" id="lRh-H5-zda"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wdg-Dc-biW">
+                            <connections>
+                                <action selector="saveDecision:" destination="5ae-Fa-IrB" id="yMX-nc-TYc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="biasButton" destination="q3Z-FX-WEt" id="OCw-YJ-BGc"/>
+                        <outlet property="daysText" destination="8SA-6g-xfm" id="KPO-8e-Nx6"/>
+                        <outlet property="decisionText" destination="gzK-Qb-bvs" id="fqs-5U-g8M"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2230" y="-933"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OCK-h4-R30">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddz-QJ-ktr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="F7l-48-Ged" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mgx-vi-GHL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="a2q-q8-5uT"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="319" y="-467"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j0I-Sw-BM8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTq-8p-kXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="8Er-VS-Zn1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RJd-At-T5C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5ae-Fa-IrB" kind="relationship" relationship="rootViewController" id="9sp-2f-xtU"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1699" y="-933"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="thumbs-up-selected.png" width="25" height="25"/>
+        <image name="thumbs-up.png" width="25" height="25"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
