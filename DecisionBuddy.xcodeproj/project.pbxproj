@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE0ABB3A1614386C00C6FA8F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0ABB391614386C00C6FA8F /* SenTestingKit.framework */; };
-		EE0ABB3B1614386C00C6FA8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256615E7336800E9B704 /* UIKit.framework */; };
-		EE0ABB3C1614386C00C6FA8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256815E7336800E9B704 /* Foundation.framework */; };
-		EE0ABB421614386C00C6FA8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE0ABB401614386C00C6FA8F /* InfoPlist.strings */; };
-		EE0ABB451614386C00C6FA8F /* DateUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ABB441614386C00C6FA8F /* DateUtilTests.m */; };
-		EE0ABB4E1614590D00C6FA8F /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */; };
 		EE0ABB501615814300C6FA8F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0ABB4F1615814300C6FA8F /* icon.png */; };
 		EE0ABB52161AC13800C6FA8F /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0ABB51161AC13800C6FA8F /* iTunesArtwork.png */; };
 		EE1D731915E8C2A400CEF7C5 /* DecisionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1D731815E8C2A400CEF7C5 /* DecisionTableViewCell.xib */; };
@@ -32,6 +26,21 @@
 		EEBC257715E7336800E9B704 /* DecisionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC257615E7336800E9B704 /* DecisionAppDelegate.m */; };
 		EEBC257A15E7336800E9B704 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBC257815E7336800E9B704 /* MainStoryboard.storyboard */; };
 		EEBC257D15E7336800E9B704 /* AddDecisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC257C15E7336800E9B704 /* AddDecisionViewController.m */; };
+		EEBDB54C162BF8890066CFC6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0ABB391614386C00C6FA8F /* SenTestingKit.framework */; };
+		EEBDB54D162BF8890066CFC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256615E7336800E9B704 /* UIKit.framework */; };
+		EEBDB54E162BF8890066CFC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256815E7336800E9B704 /* Foundation.framework */; };
+		EEBDB554162BF8890066CFC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEBDB552162BF8890066CFC6 /* InfoPlist.strings */; };
+		EEBDB557162BF8890066CFC6 /* DateUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBDB556162BF8890066CFC6 /* DateUtilTest.m */; };
+		EEBDB55C162BF8A20066CFC6 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */; };
+		EEBDB55E162C061D0066CFC6 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */; };
+		EEBDB55F162C063E0066CFC6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8515F244220009DF91 /* MapKit.framework */; };
+		EEBDB560162C063E0066CFC6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8715F2442E0009DF91 /* QuartzCore.framework */; };
+		EEBDB561162C06560066CFC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256A15E7336800E9B704 /* CoreGraphics.framework */; };
+		EEBDB562162C06A10066CFC6 /* DDayAttributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */; };
+		EEBDB566162EBEC90066CFC6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBDB563162EBEC90066CFC6 /* Default-568h@2x.png */; };
+		EEBDB567162EBEC90066CFC6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBDB564162EBEC90066CFC6 /* Default.png */; };
+		EEBDB568162EBEC90066CFC6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBDB565162EBEC90066CFC6 /* Default@2x.png */; };
+		EEBDB571162ECB750066CFC6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */; };
 		EEBEC36A15E77C7700D60DF5 /* DecisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */; };
 		EEBEC36E15E77D3B00D60DF5 /* Decision.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBEC36D15E77D3B00D60DF5 /* Decision.m */; };
 		EEC93D8615F244220009DF91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8515F244220009DF91 /* MapKit.framework */; };
@@ -46,6 +55,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EEBDB569162EC3B90066CFC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		EEBDB56B162EC3C50066CFC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
 		EEC93D9615F24F800009DF91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
@@ -60,23 +83,10 @@
 			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
 			remoteInfo = LogicTests;
 		};
-		EEC93D9A15F250080009DF91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = TapkuLibrary;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EE0ABB381614386C00C6FA8F /* DecisionBuddyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecisionBuddyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0ABB391614386C00C6FA8F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		EE0ABB3F1614386C00C6FA8F /* DecisionBuddyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DecisionBuddyTests-Info.plist"; sourceTree = "<group>"; };
-		EE0ABB411614386C00C6FA8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EE0ABB431614386C00C6FA8F /* DateUtilTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtilTests.h; sourceTree = "<group>"; };
-		EE0ABB441614386C00C6FA8F /* DateUtilTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtilTests.m; sourceTree = "<group>"; };
-		EE0ABB461614386C00C6FA8F /* DecisionBuddyTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecisionBuddyTests-Prefix.pch"; sourceTree = "<group>"; };
 		EE0ABB4F1615814300C6FA8F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		EE0ABB51161AC13800C6FA8F /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		EE1D731815E8C2A400CEF7C5 /* DecisionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DecisionTableViewCell.xib; sourceTree = "<group>"; };
@@ -105,6 +115,16 @@
 		EEBC257915E7336800E9B704 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		EEBC257B15E7336800E9B704 /* AddDecisionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDecisionViewController.h; sourceTree = "<group>"; };
 		EEBC257C15E7336800E9B704 /* AddDecisionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddDecisionViewController.m; sourceTree = "<group>"; };
+		EEBDB54B162BF8890066CFC6 /* DecisionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecisionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEBDB551162BF8890066CFC6 /* DecisionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DecisionTests-Info.plist"; sourceTree = "<group>"; };
+		EEBDB553162BF8890066CFC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EEBDB555162BF8890066CFC6 /* DateUtilTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtilTest.h; sourceTree = "<group>"; };
+		EEBDB556162BF8890066CFC6 /* DateUtilTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtilTest.m; sourceTree = "<group>"; };
+		EEBDB558162BF8890066CFC6 /* DecisionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecisionTests-Prefix.pch"; sourceTree = "<group>"; };
+		EEBDB563162EBEC90066CFC6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EEBDB564162EBEC90066CFC6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EEBDB565162EBEC90066CFC6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EEBDB56D162EC4970066CFC6 /* FacebookSDK */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = FacebookSDK; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/FacebookSDK; sourceTree = "<group>"; };
 		EEBEC36815E77C7700D60DF5 /* DecisionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionTableViewController.h; sourceTree = "<group>"; };
 		EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionTableViewController.m; sourceTree = "<group>"; };
 		EEBEC36C15E77D3B00D60DF5 /* Decision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decision.h; sourceTree = "<group>"; };
@@ -124,16 +144,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EE0ABB341614386C00C6FA8F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EE0ABB3A1614386C00C6FA8F /* SenTestingKit.framework in Frameworks */,
-				EE0ABB3B1614386C00C6FA8F /* UIKit.framework in Frameworks */,
-				EE0ABB3C1614386C00C6FA8F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EEBC255F15E7336800E9B704 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,32 +158,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EEBDB547162BF8890066CFC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEBDB571162ECB750066CFC6 /* FacebookSDK.framework in Frameworks */,
+				EEBDB55E162C061D0066CFC6 /* libTapkuLibrary.a in Frameworks */,
+				EEBDB561162C06560066CFC6 /* CoreGraphics.framework in Frameworks */,
+				EEBDB55F162C063E0066CFC6 /* MapKit.framework in Frameworks */,
+				EEBDB560162C063E0066CFC6 /* QuartzCore.framework in Frameworks */,
+				EEBDB54C162BF8890066CFC6 /* SenTestingKit.framework in Frameworks */,
+				EEBDB54D162BF8890066CFC6 /* UIKit.framework in Frameworks */,
+				EEBDB54E162BF8890066CFC6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE0ABB3D1614386C00C6FA8F /* DecisionBuddyTests */ = {
-			isa = PBXGroup;
-			children = (
-				EE0ABB431614386C00C6FA8F /* DateUtilTests.h */,
-				EE0ABB441614386C00C6FA8F /* DateUtilTests.m */,
-				EE0ABB3E1614386C00C6FA8F /* Supporting Files */,
-			);
-			path = DecisionBuddyTests;
-			sourceTree = "<group>";
-		};
-		EE0ABB3E1614386C00C6FA8F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EE0ABB3F1614386C00C6FA8F /* DecisionBuddyTests-Info.plist */,
-				EE0ABB401614386C00C6FA8F /* InfoPlist.strings */,
-				EE0ABB461614386C00C6FA8F /* DecisionBuddyTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		EE1D732615E918C400CEF7C5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EEBDB563162EBEC90066CFC6 /* Default-568h@2x.png */,
+				EEBDB564162EBEC90066CFC6 /* Default.png */,
+				EEBDB565162EBEC90066CFC6 /* Default@2x.png */,
 				EE1D731E15E9181200CEF7C5 /* thumbs-down-selected.png */,
 				EE1D731F15E9181200CEF7C5 /* thumbs-down.png */,
 				EE1D732015E9181200CEF7C5 /* thumbs-up-selected.png */,
@@ -185,10 +193,11 @@
 		EEBC255715E7336800E9B704 = {
 			isa = PBXGroup;
 			children = (
+				EEBDB56D162EC4970066CFC6 /* FacebookSDK */,
 				EEC93D8715F2442E0009DF91 /* QuartzCore.framework */,
 				EEC93D8515F244220009DF91 /* MapKit.framework */,
 				EEBC256C15E7336800E9B704 /* DecisionBuddy */,
-				EE0ABB3D1614386C00C6FA8F /* DecisionBuddyTests */,
+				EEBDB54F162BF8890066CFC6 /* DecisionTests */,
 				EEBC256515E7336800E9B704 /* Frameworks */,
 				EEBC256315E7336800E9B704 /* Products */,
 			);
@@ -198,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				EEBC256215E7336800E9B704 /* DecisionBuddy.app */,
-				EE0ABB381614386C00C6FA8F /* DecisionBuddyTests.octest */,
+				EEBDB54B162BF8890066CFC6 /* DecisionTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +273,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EEBDB54F162BF8890066CFC6 /* DecisionTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEBDB555162BF8890066CFC6 /* DateUtilTest.h */,
+				EEBDB556162BF8890066CFC6 /* DateUtilTest.m */,
+				EEBDB550162BF8890066CFC6 /* Supporting Files */,
+			);
+			path = DecisionTests;
+			sourceTree = "<group>";
+		};
+		EEBDB550162BF8890066CFC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEBDB551162BF8890066CFC6 /* DecisionTests-Info.plist */,
+				EEBDB552162BF8890066CFC6 /* InfoPlist.strings */,
+				EEBDB558162BF8890066CFC6 /* DecisionTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EEC93D8E15F24F7F0009DF91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,24 +305,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE0ABB371614386C00C6FA8F /* DecisionBuddyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EE0ABB471614386C00C6FA8F /* Build configuration list for PBXNativeTarget "DecisionBuddyTests" */;
-			buildPhases = (
-				EE0ABB331614386C00C6FA8F /* Sources */,
-				EE0ABB341614386C00C6FA8F /* Frameworks */,
-				EE0ABB351614386C00C6FA8F /* Resources */,
-				EE0ABB361614386C00C6FA8F /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DecisionBuddyTests;
-			productName = DecisionBuddyTests;
-			productReference = EE0ABB381614386C00C6FA8F /* DecisionBuddyTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 		EEBC256115E7336800E9B704 /* DecisionBuddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEBC258015E7336800E9B704 /* Build configuration list for PBXNativeTarget "DecisionBuddy" */;
@@ -305,12 +316,31 @@
 			buildRules = (
 			);
 			dependencies = (
-				EEC93D9B15F250080009DF91 /* PBXTargetDependency */,
+				EEBDB56A162EC3B90066CFC6 /* PBXTargetDependency */,
 			);
 			name = DecisionBuddy;
 			productName = DecisionBuddy;
 			productReference = EEBC256215E7336800E9B704 /* DecisionBuddy.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EEBDB54A162BF8890066CFC6 /* DecisionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEBDB559162BF8890066CFC6 /* Build configuration list for PBXNativeTarget "DecisionTests" */;
+			buildPhases = (
+				EEBDB546162BF8890066CFC6 /* Sources */,
+				EEBDB547162BF8890066CFC6 /* Frameworks */,
+				EEBDB548162BF8890066CFC6 /* Resources */,
+				EEBDB549162BF8890066CFC6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEBDB56C162EC3C50066CFC6 /* PBXTargetDependency */,
+			);
+			name = DecisionTests;
+			productName = DecisionTests;
+			productReference = EEBDB54B162BF8890066CFC6 /* DecisionTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -341,7 +371,7 @@
 			projectRoot = "";
 			targets = (
 				EEBC256115E7336800E9B704 /* DecisionBuddy */,
-				EE0ABB371614386C00C6FA8F /* DecisionBuddyTests */,
+				EEBDB54A162BF8890066CFC6 /* DecisionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -364,14 +394,6 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EE0ABB351614386C00C6FA8F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EE0ABB421614386C00C6FA8F /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EEBC256015E7336800E9B704 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,13 +409,24 @@
 				EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */,
 				EE0ABB501615814300C6FA8F /* icon.png in Resources */,
 				EE0ABB52161AC13800C6FA8F /* iTunesArtwork.png in Resources */,
+				EEBDB566162EBEC90066CFC6 /* Default-568h@2x.png in Resources */,
+				EEBDB567162EBEC90066CFC6 /* Default.png in Resources */,
+				EEBDB568162EBEC90066CFC6 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEBDB548162BF8890066CFC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEBDB554162BF8890066CFC6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EE0ABB361614386C00C6FA8F /* ShellScript */ = {
+		EEBDB549162BF8890066CFC6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -409,15 +442,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EE0ABB331614386C00C6FA8F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EE0ABB4E1614590D00C6FA8F /* DateUtil.m in Sources */,
-				EE0ABB451614386C00C6FA8F /* DateUtilTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EEBC255E15E7336800E9B704 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,25 +461,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EEBDB546162BF8890066CFC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEBDB557162BF8890066CFC6 /* DateUtilTest.m in Sources */,
+				EEBDB55C162BF8A20066CFC6 /* DateUtil.m in Sources */,
+				EEBDB562162C06A10066CFC6 /* DDayAttributionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EEC93D9B15F250080009DF91 /* PBXTargetDependency */ = {
+		EEBDB56A162EC3B90066CFC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TapkuLibrary;
-			targetProxy = EEC93D9A15F250080009DF91 /* PBXContainerItemProxy */;
+			targetProxy = EEBDB569162EC3B90066CFC6 /* PBXContainerItemProxy */;
+		};
+		EEBDB56C162EC3C50066CFC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = EEBDB56B162EC3C50066CFC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EE0ABB401614386C00C6FA8F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE0ABB411614386C00C6FA8F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		EEBC256F15E7336800E9B704 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -472,39 +503,17 @@
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
+		EEBDB552162BF8890066CFC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEBDB553162BF8890066CFC6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EE0ABB481614386C00C6FA8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DecisionBuddyTests/DecisionBuddyTests-Prefix.pch";
-				INFOPLIST_FILE = "DecisionBuddyTests/DecisionBuddyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		EE0ABB491614386C00C6FA8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DecisionBuddyTests/DecisionBuddyTests-Prefix.pch";
-				INFOPLIST_FILE = "DecisionBuddyTests/DecisionBuddyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 		EEBC257E15E7336800E9B704 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -514,6 +523,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -526,7 +539,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				HEADER_SEARCH_PATHS = /Users/elangobalusamy/gitspace/cal/tapkulibrary/src;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -541,12 +555,17 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				HEADER_SEARCH_PATHS = /Users/elangobalusamy/gitspace/cal/tapkulibrary/src;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -557,14 +576,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DecisionBuddy/DecisionBuddy-Prefix.pch";
-				HEADER_SEARCH_PATHS = /Users/elangobalusamy/gitspace/cal/tapkulibrary/src;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DecisionBuddy/DecisionBuddy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				New_Setting = "";
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -581,14 +598,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DecisionBuddy/DecisionBuddy-Prefix.pch";
-				HEADER_SEARCH_PATHS = /Users/elangobalusamy/gitspace/cal/tapkulibrary/src;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DecisionBuddy/DecisionBuddy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				New_Setting = "";
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -601,18 +616,57 @@
 			};
 			name = Release;
 		};
+		EEBDB55A162BF8890066CFC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DecisionTests/DecisionTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "DecisionTests/DecisionTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-lsqlite3.0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EEBDB55B162BF8890066CFC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DecisionTests/DecisionTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "DecisionTests/DecisionTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-lsqlite3.0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE0ABB471614386C00C6FA8F /* Build configuration list for PBXNativeTarget "DecisionBuddyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EE0ABB481614386C00C6FA8F /* Debug */,
-				EE0ABB491614386C00C6FA8F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		EEBC255C15E7336800E9B704 /* Build configuration list for PBXProject "DecisionBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -630,6 +684,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EEBDB559162BF8890066CFC6 /* Build configuration list for PBXNativeTarget "DecisionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEBDB55A162BF8890066CFC6 /* Debug */,
+				EEBDB55B162BF8890066CFC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
