@@ -33,32 +33,23 @@
                                     <action selector="facebookAction:" destination="2" eventType="touchUpInside" id="7FM-hC-EYe"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="footer.png" id="ywd-hr-qZG">
-                                <rect key="frame" x="0.0" y="347" width="320" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="4OW-kl-fsT">
-                                <rect key="frame" x="27" y="359" width="266" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="start.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="afterLogin" destination="2" eventType="touchUpInside" id="9LP-dv-7C5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Lkj-Tt-mge"/>
+                        <barButtonItem title="Start tracking your decision " id="ceC-3M-hqd">
+                            <color key="tintColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="afterLogin" destination="2" id="hAm-u8-HDj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="i9J-Rh-988"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Home" id="NxE-ug-D0g"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <connections>
                         <outlet property="facebookLogin" destination="Fgp-xc-D4t" id="Hya-cZ-I42"/>
-                        <outlet property="startButton" destination="4OW-kl-fsT" id="MdL-6t-CpR"/>
                         <segue destination="VC8-Kt-gVe" kind="push" identifier="decisionSegue" id="X05-J2-Ers"/>
                     </connections>
                 </viewController>
@@ -71,7 +62,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJd-WM-a66" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="VC8-Kt-gVe" customClass="DecisionTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="16L-qD-RtF">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections/>
@@ -80,13 +71,18 @@
                             <outlet property="delegate" destination="VC8-Kt-gVe" id="mDa-US-PG7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Decisions" id="Epq-JZ-azb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X3b-J1-33s">
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3vq-IW-v5d"/>
+                        <barButtonItem title="Add a new tracker" id="X3b-J1-33s">
+                            <color key="tintColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="8Er-VS-Zn1" kind="modal" identifier="addDecisionSegue" id="fZb-e6-dYw"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="xLQ-C0-J3Z"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Decisions" id="Epq-JZ-azb"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="Kk7-2i-TwX" kind="push" identifier="showDecisionResultSegue" id="foc-Hd-hGe"/>
                     </connections>
@@ -100,7 +96,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rP4-Kc-9cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Kk7-2i-TwX" customClass="DDayAttributionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHG-fg-ZAP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -118,7 +114,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0U-Md-NWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Hrb-GH-NKy" customClass="PostToFacebookViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Y2-PT-qVb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hhg-AG-iou">
@@ -163,6 +159,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="contentInset" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="8fu-Dm-yJu">
                                 <cells>
@@ -239,6 +236,16 @@
                             <outlet property="delegate" destination="cvt-Ca-X5P" id="ko2-LI-hzI"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EoI-o8-vPH"/>
+                        <barButtonItem title="Done" id="qJL-m6-wvC">
+                            <color key="tintColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveDecision:" destination="cvt-Ca-X5P" id="9Gm-ix-4uc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="a0O-pf-muL"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Create a tracker" id="dg7-Pb-8qP">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="wWG-cg-zyR">
                             <connections>
@@ -246,6 +253,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <connections>
                         <outlet property="daysText" destination="SRh-X5-Y9L" id="pfX-Vc-fqy"/>
                         <outlet property="decisionText" destination="XPJ-Xp-XHd" id="IxR-tM-Qzc"/>
@@ -259,13 +267,18 @@
         <scene sceneID="OCK-h4-R30">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddz-QJ-ktr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="F7l-48-Ged" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="F7l-48-Ged" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mgx-vi-GHL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="UPg-PX-BQP">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="rootViewController" id="a2q-q8-5uT"/>
                     </connections>
@@ -277,13 +290,18 @@
         <scene sceneID="j0I-Sw-BM8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTq-8p-kXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="8Er-VS-Zn1" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="8Er-VS-Zn1" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RJd-At-T5C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="99P-vu-CdU">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="cvt-Ca-X5P" kind="relationship" relationship="rootViewController" id="Zib-0F-Ua7"/>
                     </connections>
@@ -294,9 +312,7 @@
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
-        <image name="footer.png" width="30" height="151"/>
         <image name="login-button-small.png" width="151" height="43"/>
-        <image name="start.png" width="572" height="103"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

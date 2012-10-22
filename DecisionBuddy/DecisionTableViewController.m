@@ -107,6 +107,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     DecisionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DECISION_CELL];
     if (cell == nil)
     {
@@ -139,6 +140,9 @@
         [cell.yesNoSwitch setOffText:@"NO"];
     
         [cell.yesNoSwitch setOn:[decisionOnADay mindSays]];
+        
+        [cell.yesNoSwitch setHidden:NO];
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
     
         [cell setDelegate:self];
     
