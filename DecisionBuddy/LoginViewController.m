@@ -14,6 +14,7 @@
 #import "DateUtil.h"
 #import "DecisionAppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface LoginViewController ()
 
@@ -94,6 +95,7 @@
     // UI. However, since this is not user intitiated, do not show the login UX.
     DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate openSessionWithAllowLoginUI:NO];
+    
 }
 
 - (void)viewDidUnload {
@@ -104,9 +106,9 @@
 
 - (void)sessionStateChanged:(NSNotification*)notification {
     if (FBSession.activeSession.isOpen) {
-        [self.facebookLogin setTitle:@"Logout of Facebook" forState:UIControlStateNormal];
+        [self.facebookLogin setTitle:@"Logout  " forState:UIControlStateNormal];
     } else {
-        [self.facebookLogin setTitle:@"Login to Facebook" forState:UIControlStateNormal];
+        [self.facebookLogin setTitle:@"Login " forState:UIControlStateNormal];
     }
 }
 @end

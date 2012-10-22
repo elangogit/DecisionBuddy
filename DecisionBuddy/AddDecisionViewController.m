@@ -17,11 +17,20 @@
 
 @synthesize decisionText = _decisionText;
 @synthesize daysText = _daysText;
-@synthesize biasButton = _biasButton;
+@synthesize yesNoSwitch = _yesNoSwitch;
 @synthesize delegate = _delegate;
 
 
-- (IBAction)saveDecision:(UIBarButtonItem *)sender {
+- (void)viewDidLoad
+{
+    [self.yesNoSwitch setOnText:@"YES"];
+    [self.yesNoSwitch setOffText:@"NO"];
+    self.decisionText.delegate = self;
+    self.daysText.delegate = self;
+}
+
+- (IBAction)saveDecision:(UIBarButtonItem *)sender
+{
 
     if([[self.decisionText text] length] == 0)
     {
@@ -46,24 +55,14 @@
         return;
     }
     
-    [self.delegate addDecisionViewControllerDidFinish:self point:[self.decisionText text] daysToDecide:[NSNumber numberWithInt:daysToDecide] biasedTo:[self.biasButton isSelected]];
+    [self.delegate addDecisionViewControllerDidFinish:self point:[self.decisionText text] daysToDecide:[NSNumber numberWithInt:daysToDecide] biasedTo:[self.yesNoSwitch isOn]];
 
 }
 
 
-- (IBAction)cancelDecision:(UIBarButtonItem *)sender {
+- (IBAction)cancelDecision:(UIBarButtonItem *)sender
+{
     [self.delegate addDecisionViewControllerDidCancel:self];
-}
-
-- (IBAction)toggleBias {
-    if([self.biasButton isSelected])
-    {
-        [self.biasButton setSelected:NO];
-    }
-    else
-    {
-        [self.biasButton setSelected:YES];
-    }
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -83,11 +82,12 @@
 
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range
-replacementString:(NSString *)string {
-    if ([string isEqualToString:@""]) return YES;
+replacementString:(NSString *)string
+{       if ([string isEqualToString:@""]) return YES;
     if (textField == self.daysText) {
         unichar c = [string characterAtIndex:0];
-        if ([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:c]) {
+        if ([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:c])
+        {
             return YES;
         } else {
             return NO;
@@ -97,10 +97,11 @@ replacementString:(NSString *)string {
     return YES;
 }
 
-- (void)viewDidUnload {
+- (void)viewDidUnload
+{
     [self setDecisionText:nil];
     [self setDaysText:nil];
-    [self setBiasButton:nil];
+    [self setYesNoSwitch:nil];
     [super viewDidUnload];
 }
 @end

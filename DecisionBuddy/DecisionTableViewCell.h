@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DCRoundSwitch.h"
 
 @protocol DecisionDelegate;
 
@@ -15,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *decisionText;
 @property (weak, nonatomic) IBOutlet UILabel *daysToGo;
 
-@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (weak, nonatomic) IBOutlet DCRoundSwitch *yesNoSwitch;
 
 @property (weak, nonatomic) id <DecisionDelegate> delegate;
 

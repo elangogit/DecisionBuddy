@@ -12,21 +12,12 @@
 
 @synthesize decisionText = _decisionText;
 @synthesize daysToGo = _daysToGo;
-@synthesize likeButton = _likeButton;
+@synthesize yesNoSwitch = _yesNoSwitch;
 @synthesize delegate = _delegate;
 
-- (IBAction)toggleLike {
-
-    if([self.likeButton isSelected])
-    {        
-        [self.likeButton setSelected:NO];
-    }
-    else
-    {
-        [self.likeButton setSelected:YES];
-    }
+- (IBAction)yesNoChanged {
     
-    [self.delegate decisionTakenOn:self as:[self.likeButton isSelected]];
+    [self.delegate decisionTakenOn:self as:[self.yesNoSwitch isOn]];
 
 }
 

@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DCRoundSwitch.h"
+
 @protocol AddDecisionViewControllerDelegate;
 
 
-@interface AddDecisionViewController : UIViewController <UITextFieldDelegate>
+@interface AddDecisionViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *decisionText;
 
 @property (weak, nonatomic) IBOutlet UITextField *daysText;
-@property (weak, nonatomic) IBOutlet UIButton *biasButton;
+@property (weak, nonatomic) IBOutlet DCRoundSwitch *yesNoSwitch;
+
 
 @property (weak, nonatomic) id <AddDecisionViewControllerDelegate> delegate;
 

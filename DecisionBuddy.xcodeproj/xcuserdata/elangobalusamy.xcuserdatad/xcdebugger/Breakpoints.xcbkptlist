@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "DecisionBuddy/LoginViewController.m"
-         timestampString = "370527081.60927"
+         timestampString = "372174946.626741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114">
+         startingLineNumber = "116"
+         endingLineNumber = "116">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -84,11 +84,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "DecisionBuddy/LoginViewController.m"
-         timestampString = "370527081.60927"
+         timestampString = "372172984.926661"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>

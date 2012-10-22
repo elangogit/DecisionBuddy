@@ -18,6 +18,10 @@
 		EE1D732915EA478400CEF7C5 /* DecisionOnADay.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732815EA478400CEF7C5 /* DecisionOnADay.m */; };
 		EE1D732C15EDA63700CEF7C5 /* FilePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732B15EDA63700CEF7C5 /* FilePersistence.m */; };
 		EE1D732F15EE15FC00CEF7C5 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */; };
+		EE3BDC4016352AC20024BBB3 /* DCRoundSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3BDC3916352AC20024BBB3 /* DCRoundSwitch.m */; };
+		EE3BDC4116352AC20024BBB3 /* DCRoundSwitchKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3BDC3B16352AC20024BBB3 /* DCRoundSwitchKnobLayer.m */; };
+		EE3BDC4216352AC20024BBB3 /* DCRoundSwitchOutlineLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3BDC3D16352AC20024BBB3 /* DCRoundSwitchOutlineLayer.m */; };
+		EE3BDC4316352AC20024BBB3 /* DCRoundSwitchToggleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3BDC3F16352AC20024BBB3 /* DCRoundSwitchToggleLayer.m */; };
 		EEBC256715E7336800E9B704 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256615E7336800E9B704 /* UIKit.framework */; };
 		EEBC256915E7336800E9B704 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256815E7336800E9B704 /* Foundation.framework */; };
 		EEBC256B15E7336800E9B704 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256A15E7336800E9B704 /* CoreGraphics.framework */; };
@@ -48,6 +52,8 @@
 		EEC93D8B15F24A4A0009DF91 /* DDayAttributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */; };
 		EEC93D9315F24F7F0009DF91 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */; };
 		EEC93D9C15F250120009DF91 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */; };
+		EEC9E50C162EEB7700216E3B /* CoolButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9E508162EEB7700216E3B /* CoolButton.m */; };
+		EEC9E50D162EEB7700216E3B /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9E509162EEB7700216E3B /* Common.m */; };
 		EEF4A02A15E7AF95009909A8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF4A02915E7AF95009909A8 /* LoginViewController.m */; };
 		EEF5D70415F5CDB900151E6B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */; };
 		EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEF5D70515F5CE4700151E6B /* FacebookSDKResources.bundle */; };
@@ -102,6 +108,14 @@
 		EE1D732B15EDA63700CEF7C5 /* FilePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePersistence.m; sourceTree = "<group>"; };
 		EE1D732D15EE15FC00CEF7C5 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		EE3BDC3816352AC20024BBB3 /* DCRoundSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitch.h; sourceTree = "<group>"; };
+		EE3BDC3916352AC20024BBB3 /* DCRoundSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRoundSwitch.m; sourceTree = "<group>"; };
+		EE3BDC3A16352AC20024BBB3 /* DCRoundSwitchKnobLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitchKnobLayer.h; sourceTree = "<group>"; };
+		EE3BDC3B16352AC20024BBB3 /* DCRoundSwitchKnobLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRoundSwitchKnobLayer.m; sourceTree = "<group>"; };
+		EE3BDC3C16352AC20024BBB3 /* DCRoundSwitchOutlineLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitchOutlineLayer.h; sourceTree = "<group>"; };
+		EE3BDC3D16352AC20024BBB3 /* DCRoundSwitchOutlineLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRoundSwitchOutlineLayer.m; sourceTree = "<group>"; };
+		EE3BDC3E16352AC20024BBB3 /* DCRoundSwitchToggleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitchToggleLayer.h; sourceTree = "<group>"; };
+		EE3BDC3F16352AC20024BBB3 /* DCRoundSwitchToggleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRoundSwitchToggleLayer.m; sourceTree = "<group>"; };
 		EEBC256215E7336800E9B704 /* DecisionBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisionBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBC256615E7336800E9B704 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEBC256815E7336800E9B704 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -135,6 +149,10 @@
 		EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDayAttributionViewController.m; sourceTree = "<group>"; };
 		EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../gitspace/cal/tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
 		EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../gitspace/cal/tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		EEC9E508162EEB7700216E3B /* CoolButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolButton.m; sourceTree = "<group>"; };
+		EEC9E509162EEB7700216E3B /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		EEC9E50A162EEB7700216E3B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		EEC9E50B162EEB7700216E3B /* CoolButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolButton.h; sourceTree = "<group>"; };
 		EEF4A02815E7AF95009909A8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EEF4A02915E7AF95009909A8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -190,6 +208,21 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		EE3BDC37163526960024BBB3 /* DCRoundSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				EE3BDC3816352AC20024BBB3 /* DCRoundSwitch.h */,
+				EE3BDC3916352AC20024BBB3 /* DCRoundSwitch.m */,
+				EE3BDC3A16352AC20024BBB3 /* DCRoundSwitchKnobLayer.h */,
+				EE3BDC3B16352AC20024BBB3 /* DCRoundSwitchKnobLayer.m */,
+				EE3BDC3C16352AC20024BBB3 /* DCRoundSwitchOutlineLayer.h */,
+				EE3BDC3D16352AC20024BBB3 /* DCRoundSwitchOutlineLayer.m */,
+				EE3BDC3E16352AC20024BBB3 /* DCRoundSwitchToggleLayer.h */,
+				EE3BDC3F16352AC20024BBB3 /* DCRoundSwitchToggleLayer.m */,
+			);
+			name = DCRoundSwitch;
+			sourceTree = "<group>";
+		};
 		EEBC255715E7336800E9B704 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +263,8 @@
 		EEBC256C15E7336800E9B704 /* DecisionBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				EE3BDC37163526960024BBB3 /* DCRoundSwitch */,
+				EEC9E507162EEB4400216E3B /* CoolButton */,
 				EE0ABB51161AC13800C6FA8F /* iTunesArtwork.png */,
 				EE1D732D15EE15FC00CEF7C5 /* DateUtil.h */,
 				EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */,
@@ -300,6 +335,17 @@
 				EEC93D9915F24F800009DF91 /* LogicTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EEC9E507162EEB4400216E3B /* CoolButton */ = {
+			isa = PBXGroup;
+			children = (
+				EEC9E508162EEB7700216E3B /* CoolButton.m */,
+				EEC9E509162EEB7700216E3B /* Common.m */,
+				EEC9E50A162EEB7700216E3B /* Common.h */,
+				EEC9E50B162EEB7700216E3B /* CoolButton.h */,
+			);
+			name = CoolButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +504,12 @@
 				EE1D732F15EE15FC00CEF7C5 /* DateUtil.m in Sources */,
 				EEC93D8B15F24A4A0009DF91 /* DDayAttributionViewController.m in Sources */,
 				EEF5D70915F6221900151E6B /* PostToFacebookViewController.m in Sources */,
+				EEC9E50C162EEB7700216E3B /* CoolButton.m in Sources */,
+				EEC9E50D162EEB7700216E3B /* Common.m in Sources */,
+				EE3BDC4016352AC20024BBB3 /* DCRoundSwitch.m in Sources */,
+				EE3BDC4116352AC20024BBB3 /* DCRoundSwitchKnobLayer.m in Sources */,
+				EE3BDC4216352AC20024BBB3 /* DCRoundSwitchOutlineLayer.m in Sources */,
+				EE3BDC4316352AC20024BBB3 /* DCRoundSwitchToggleLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +744,7 @@
 				EEBDB55B162BF8890066CFC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

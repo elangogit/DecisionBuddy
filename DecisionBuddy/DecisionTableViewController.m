@@ -63,8 +63,8 @@
 
 #pragma mark - Table view data source
 
-#define RECENT_DECISION_SECTION 0
-#define DECISION_TO_BE_TAKEN_SECTION 1
+#define RECENT_DECISION_SECTION 1
+#define DECISION_TO_BE_TAKEN_SECTION 0
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -117,7 +117,7 @@
     if (indexPath.section == RECENT_DECISION_SECTION)
     {
         Decision *decision = [self.recentDecisions objectAtIndex:indexPath.row];
-        [[cell likeButton] setHidden:YES];
+        [[cell yesNoSwitch] setHidden:YES];
         [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
         [[cell daysToGo] setText:nil];
         [[cell decisionText] setText:decision.point];
@@ -134,8 +134,11 @@
         NSString *daysToGo =  [decision.daysLeftToDecideFromToday stringValue];
     
         [cell.daysToGo setText:[daysToGo stringByAppendingString:DAYS_TO_GO]];
+        
+        [cell.yesNoSwitch setOnText:@"YES"];
+        [cell.yesNoSwitch setOffText:@"NO"];
     
-        [cell.likeButton setSelected:[decisionOnADay mindSays]];
+        [cell.yesNoSwitch setOn:[decisionOnADay mindSays]];
     
         [cell setDelegate:self];
     
