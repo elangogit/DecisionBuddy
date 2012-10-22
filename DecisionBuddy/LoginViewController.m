@@ -22,7 +22,7 @@
 
 @implementation LoginViewController
 
-@synthesize login = _login;
+@synthesize startButton = _startButton;
 @synthesize facebookLogin = _facebookLogin;
 
 
@@ -96,19 +96,21 @@
     DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate openSessionWithAllowLoginUI:NO];
     
+    
 }
 
 - (void)viewDidUnload {
     [self setFacebookLogin:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self setStartButton:nil];
     [super viewDidUnload];
 }
 
 - (void)sessionStateChanged:(NSNotification*)notification {
     if (FBSession.activeSession.isOpen) {
-        [self.facebookLogin setTitle:@"Logout  " forState:UIControlStateNormal];
+        [self.facebookLogin setTitle:@"     Logout" forState:UIControlStateNormal];
     } else {
-        [self.facebookLogin setTitle:@"Login " forState:UIControlStateNormal];
+        [self.facebookLogin setTitle:@"      Login" forState:UIControlStateNormal];
     }
 }
 @end
