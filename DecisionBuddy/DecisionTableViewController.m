@@ -21,10 +21,8 @@
 @implementation DecisionTableViewController
 
 @synthesize decisionArray = _decisionArray;
-@synthesize recentDecisions = _recentDecisions;
 @synthesize store = _store;
 
-#define SHOW_DECISION_SEGUE @"showDecisionResultSegue"
 #define ADD_DECISION_SEGUE @"addDecisionSegue"
 
 -(id <DecisionPersistence>)store
@@ -53,53 +51,14 @@
         AddDecisionViewController *addDecisionViewController =  [[[segue destinationViewController] viewControllers] objectAtIndex:0];
         [addDecisionViewController setDelegate:self];
     }
-    else if([segue.identifier isEqualToString:SHOW_DECISION_SEGUE])
-    {
-        DDayAttributionViewController *dDayViewController = [segue destinationViewController];
-        [dDayViewController setDecision:sender];
-        [dDayViewController setDecisions:[self.store decisionsTakenOn:sender]];
-    }
 }
 
 #pragma mark - Table view data source
 
-#define RECENT_DECISION_SECTION 1
-#define DECISION_TO_BE_TAKEN_SECTION 0
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 2;
-}
-
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *sectionHeader;
-    
-    if(section == RECENT_DECISION_SECTION)
-    {
-        if(self.recentDecisions.count != 0)
-            sectionHeader = @"Recent Decisions";
-    }
-    else
-    {
-        sectionHeader = @"Decide Today";
-    }
-    return sectionHeader;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"calling for row size");
-
-    if(section == RECENT_DECISION_SECTION)
-    {
-        return self.recentDecisions.count;
-    }
-    else
-    {
         return self.decisionArray.count;
-    }
-
 }
 
 #define DAYS_TO_GO @" days to go"
@@ -113,18 +72,10 @@
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:DECISION_CELL owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        [cell.yesNoSwitch setOnText:@"YES"];
+        [cell.yesNoSwitch setOffText:@"NO"];
+
     }
-    
-    if (indexPath.section == RECENT_DECISION_SECTION)
-    {
-        Decision *decision = [self.recentDecisions objectAtIndex:indexPath.row];
-        [[cell yesNoSwitch] setHidden:YES];
-        [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
-        [[cell daysToGo] setText:nil];
-        [[cell decisionText] setText:decision.point];
-    }
-    else
-    {
     
         DecisionOnADay *decisionOnADay = [self.decisionArray objectAtIndex:indexPath.row];
     
@@ -135,32 +86,16 @@
         NSString *daysToGo =  [decision.daysLeftToDecideFromToday stringValue];
     
         [cell.daysToGo setText:[daysToGo stringByAppendingString:DAYS_TO_GO]];
-        
-        [cell.yesNoSwitch setOnText:@"YES"];
-        [cell.yesNoSwitch setOffText:@"NO"];
     
         [cell.yesNoSwitch setOn:[decisionOnADay mindSays]];
         
-        [cell.yesNoSwitch setHidden:NO];
-        [cell setAccessoryType:UITableViewCellAccessoryNone];
-    
         [cell setDelegate:self];
     
-    }
     cell.tag = indexPath.row;
 
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@" selected row was %@",indexPath);
-    if(indexPath.section == RECENT_DECISION_SECTION)
-    {
-        [self performSegueWithIdentifier:SHOW_DECISION_SEGUE sender:[self.recentDecisions objectAtIndex:indexPath.row]];
-    }
-
-}
 
 #pragma mark - Add Decision View Controller Delegate
 

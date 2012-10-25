@@ -11,6 +11,5 @@
 @interface DecisionTableViewController : UITableViewController
 
 @property (nonatomic,copy) NSMutableArray *decisionArray;
-@property (nonatomic,copy) NSArray *recentDecisions;
 
 @end

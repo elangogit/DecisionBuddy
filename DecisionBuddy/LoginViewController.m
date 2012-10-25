@@ -15,6 +15,7 @@
 #import "DecisionAppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <QuartzCore/QuartzCore.h>
+#import "RecentDecisionTableViewController.h"
 
 @interface LoginViewController ()
 
@@ -42,9 +43,11 @@
 
 
 - (IBAction)afterLogin {
-    [self performSegueWithIdentifier:@"decisionSegue" sender:self];
+    //[self performSegueWithIdentifier:@"decisionSegue" sender:self];
 
     // i can do something in prepareForSegue
+    
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -78,9 +81,11 @@
     
     [persistenceStore alreadyDecidedToday:decisionToBeTakenArray];
 
+    UINavigationController *trackerController = [[[segue destinationViewController] viewControllers] objectAtIndex:0];
+    UINavigationController *recentController = [[[segue destinationViewController] viewControllers] objectAtIndex:1];
     
-    [[segue destinationViewController] setDecisionArray:decisionToBeTakenArray];
-    [[segue destinationViewController] setRecentDecisions:[recentDecisions copy]];
+    [[[trackerController viewControllers] objectAtIndex:0] setDecisionArray:decisionToBeTakenArray];
+    [[[recentController viewControllers] objectAtIndex:0] setRecentDecisions:[recentDecisions copy]];
 
 }
 
