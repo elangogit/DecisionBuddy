@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     [self.yesNoSwitch setOnText:@"YES"];
     [self.yesNoSwitch setOffText:@"NO"];
     self.decisionText.delegate = self;

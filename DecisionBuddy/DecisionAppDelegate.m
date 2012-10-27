@@ -8,6 +8,16 @@
 
 #import "DecisionAppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "Decision.h"
+#import "DecisionOnADay.h"
+#import "DecisionTableViewController.h"
+#import "FilePersistence.h"
+#import "DateUtil.h"
+#import "DecisionAppDelegate.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import <QuartzCore/QuartzCore.h>
+#import "RecentDecisionTableViewController.h"
+#import "LoginViewController.h"
 
 @implementation DecisionAppDelegate
 
@@ -120,6 +130,59 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
     if (FBSession.activeSession.state == FBSessionStateCreatedOpening) {
         [self closeFacebookSession];
     }
+    
+    [self initDataOnRootViewController];
+
+    //LoginViewController *loginViewController = [[LoginViewController alloc] init];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
+    
+    [self.window.rootViewController presentModalViewController:loginViewController animated:NO];
+    
+        
+}
+
+
+-(void)initDataOnRootViewController
+{
+    NSLog(@"initialize data");
+    
+    id <DecisionPersistence> persistenceStore = [[FilePersistence alloc] init];
+    
+    NSArray *decisionArray = [persistenceStore activeDecisions];
+    
+    NSDate *today = [DateUtil midnightToday];
+    
+    NSMutableArray *decisionToBeTakenArray = [[NSMutableArray alloc] init];
+    NSMutableArray *recentDecisions = [[NSMutableArray alloc] init];
+    
+    for (int index=0; index < decisionArray.count; index = index + 1) {
+        
+        Decision *decision = [decisionArray objectAtIndex:index];
+        
+        if([[decision daysLeftToDecideFromToday] intValue] <= 1)
+        {
+            [recentDecisions addObject:decision];
+        }
+        else
+        {
+            DecisionOnADay *decisionOnADay = [[DecisionOnADay alloc] initWithDecision:decision onDay:today];
+            
+            [decisionToBeTakenArray addObject:decisionOnADay];
+        }
+    }
+    
+    [persistenceStore alreadyDecidedToday:decisionToBeTakenArray];
+    
+    UITabBarController *rootViewController = [self.window rootViewController];
+    
+    UINavigationController *trackerController = [[rootViewController viewControllers] objectAtIndex:0];
+    UINavigationController *recentController = [[rootViewController viewControllers] objectAtIndex:1];
+    
+    [[[trackerController viewControllers] objectAtIndex:0] setDecisionArray:decisionToBeTakenArray];
+    [[[recentController viewControllers] objectAtIndex:0] setRecentDecisions:[recentDecisions copy]];
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

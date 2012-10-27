@@ -42,52 +42,13 @@
 }
 
 
-- (IBAction)afterLogin {
-    //[self performSegueWithIdentifier:@"decisionSegue" sender:self];
-
-    // i can do something in prepareForSegue
-    
+- (IBAction)startTracking {
+    // set user defaults so that this screen doesn't have to be shown again
+    self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self dismissModalViewControllerAnimated:YES];
     
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSLog(@"initialize data");
-
-    id <DecisionPersistence> persistenceStore = [[FilePersistence alloc] init];
-    
-    NSArray *decisionArray = [persistenceStore activeDecisions];
-    
-    NSDate *today = [DateUtil midnightToday];
-    
-    NSMutableArray *decisionToBeTakenArray = [[NSMutableArray alloc] init];
-    NSMutableArray *recentDecisions = [[NSMutableArray alloc] init];
-    
-    for (int index=0; index < decisionArray.count; index = index + 1) {
-
-        Decision *decision = [decisionArray objectAtIndex:index];
-    
-        if([[decision daysLeftToDecideFromToday] intValue] <= 1)
-        {
-            [recentDecisions addObject:decision];
-        }
-        else
-        {
-            DecisionOnADay *decisionOnADay = [[DecisionOnADay alloc] initWithDecision:decision onDay:today];
-            
-            [decisionToBeTakenArray addObject:decisionOnADay];
-        }
-    }
-    
-    [persistenceStore alreadyDecidedToday:decisionToBeTakenArray];
-
-    UINavigationController *trackerController = [[[segue destinationViewController] viewControllers] objectAtIndex:0];
-    UINavigationController *recentController = [[[segue destinationViewController] viewControllers] objectAtIndex:1];
-    
-    [[[trackerController viewControllers] objectAtIndex:0] setDecisionArray:decisionToBeTakenArray];
-    [[[recentController viewControllers] objectAtIndex:0] setRecentDecisions:[recentDecisions copy]];
-
-}
 
 - (void)viewDidLoad
 {
