@@ -175,7 +175,7 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
     
     [persistenceStore alreadyDecidedToday:decisionToBeTakenArray];
     
-    UITabBarController *rootViewController = [self.window rootViewController];
+    UITabBarController *rootViewController = (UITabBarController *) [self.window rootViewController];
     
     UINavigationController *trackerController = [[rootViewController viewControllers] objectAtIndex:0];
     UINavigationController *recentController = [[rootViewController viewControllers] objectAtIndex:1];

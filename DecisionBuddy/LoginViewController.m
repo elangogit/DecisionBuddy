@@ -1,4 +1,4 @@
-//
+    //
 //  LoginViewController.m
 //  DecisionBuddy
 //
@@ -8,16 +8,15 @@
 
 #import "LoginViewController.h"
 #import "Decision.h"
-#import "DecisionOnADay.h"
-#import "DecisionTableViewController.h"
-#import "FilePersistence.h"
-#import "DateUtil.h"
 #import "DecisionAppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <QuartzCore/QuartzCore.h>
-#import "RecentDecisionTableViewController.h"
+#import "HighlightsTableViewCell.h"
+#import "DecisionHighlight.h"
 
 @interface LoginViewController ()
+
+@property (strong, atomic) NSArray *highlightsArray;
 
 @end
 
@@ -25,7 +24,42 @@
 
 @synthesize startButton = _startButton;
 @synthesize facebookLogin = _facebookLogin;
+@synthesize highlightTableView = _highlightTableView;
+@synthesize highlightsArray = _highlightsArray;
 
+
+#define backgroundQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+#define highlightsURL [NSURL URLWithString:@"http://ninetosix.herokuapp.com/rest/buddy/highlights"] 
+
+#pragma mark Highlights Table
+
+#define HIGHLIGHTS_CELL_IDENTIFIER @"HighlightsTableViewCell"
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.highlightsArray count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+     HighlightsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HIGHLIGHTS_CELL_IDENTIFIER];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:HIGHLIGHTS_CELL_IDENTIFIER owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    DecisionHighlight *highlight = [DecisionHighlight fromDictionary:[self.highlightsArray objectAtIndex:indexPath.row]];
+    
+    [cell setDecision:highlight];
+    
+    return cell;
+}
+
+#pragma mark Buttons
 
 - (IBAction)facebookAction:(UIButton *)sender {
     
@@ -50,6 +84,8 @@
 }
 
 
+#pragma mark View Life Cycle
+
 - (void)viewDidLoad
 {
     [[NSNotificationCenter defaultCenter]
@@ -57,11 +93,34 @@
      selector:@selector(sessionStateChanged:)
      name:FBSessionStateChangedNotification
      object:nil];
+    
     // Check the session for a cached token to show the proper authenticated
     // UI. However, since this is not user intitiated, do not show the login UX.
     DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate openSessionWithAllowLoginUI:NO];
     
+    dispatch_async(backgroundQueue, ^{
+        
+        NSData* highlights = [NSData dataWithContentsOfURL:highlightsURL];
+        
+        [self performSelectorOnMainThread:@selector(fetchedHighlights:)
+                               withObject:highlights waitUntilDone:YES];
+    });
+     
+        
+}
+
+
+- (void)fetchedHighlights:(NSData *)highlights {
+    //parse out the json data
+    NSError* error;
+    self.highlightsArray = [NSJSONSerialization JSONObjectWithData:highlights
+                                                              options:kNilOptions
+                                                                error:&error];
+    
+    NSLog(@"highlights: %@", self.highlightsArray);
+    
+    [self.highlightTableView reloadData];
     
 }
 
@@ -69,6 +128,7 @@
     [self setFacebookLogin:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self setStartButton:nil];
+    [self setHighlightTableView:nil];
     [super viewDidUnload];
 }
 

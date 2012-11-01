@@ -44,7 +44,8 @@
 }
 
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)prepareForSegue:(UIStoryboardSegue *)segue
+                sender:(id)sender
 {
     if([segue.identifier isEqualToString:ADD_DECISION_SEGUE])
     {
@@ -56,7 +57,8 @@
 #pragma mark - Table view data source
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
 {
         return self.decisionArray.count;
 }
@@ -64,7 +66,8 @@
 #define DAYS_TO_GO @" days to go"
 #define DECISION_CELL @"DecisionTableViewCell"
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     DecisionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DECISION_CELL];
@@ -106,7 +109,10 @@
 
 #define DECISION_ID @"did"
 
--(void)addDecisionViewControllerDidFinish:(AddDecisionViewController *)controller point:(NSString *)point daysToDecide:(NSNumber *)days biasedTo:(BOOL)bias
+-(void)addDecisionViewControllerDidFinish:(AddDecisionViewController *)controller
+                                    point:(NSString *)point
+                             daysToDecide:(NSNumber *)days
+                                 biasedTo:(BOOL)bias
 {
     
     NSUserDefaults *userDefaults =  [NSUserDefaults standardUserDefaults];
@@ -128,7 +134,8 @@
 
 #pragma mark - Decision Delegate
 
--(void)decisionTakenOn:(DecisionTableViewCell *)decision as:(BOOL)decided
+-(void)decisionTakenOn:(DecisionTableViewCell *)decision
+                    as:(BOOL)decided
 {
     DecisionOnADay *decisionOnADay = [self.decisionArray objectAtIndex:[decision tag]];
     decisionOnADay.mindSays = decided;
