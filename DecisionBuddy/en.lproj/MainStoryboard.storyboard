@@ -14,58 +14,58 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="footer.png" id="XCG-I7-IGN">
-                                <rect key="frame" x="0.0" y="385" width="320" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="Fgp-xc-D4t">
-                                <rect key="frame" x="189" y="20" width="125" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="       Login" backgroundImage="login-button-small.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="facebookAction:" destination="2" eventType="touchUpInside" id="7FM-hC-EYe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Ee-Nd-IFQ">
-                                <rect key="frame" x="35" y="398" width="250" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="start.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startTracking" destination="2" eventType="touchUpInside" id="42m-0E-wBz"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="U1G-Dc-tel">
-                                <rect key="frame" x="0.0" y="65" width="320" height="300"/>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="U1G-Dc-tel">
+                                <rect key="frame" x="0.0" y="66" width="320" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="2" id="yUy-Oe-5Iy"/>
                                     <outlet property="delegate" destination="2" id="7gO-C2-j60"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="what.png" id="qig-th-ODl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="footer.png" id="XCG-I7-IGN">
+                                <rect key="frame" x="0.0" y="385" width="320" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Ee-Nd-IFQ">
+                                <rect key="frame" x="35" y="398" width="250" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login using Facebook" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookLogin:" destination="2" eventType="touchUpInside" id="RY3-dK-djJ"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="jdW-8M-DLm">
+                                <rect key="frame" x="151" y="219" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What the world is deciding" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="l6v-NA-fWg">
+                                <rect key="frame" x="39" y="15" width="242" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <connections>
-                        <outlet property="facebookLogin" destination="Fgp-xc-D4t" id="Hya-cZ-I42"/>
+                        <outlet property="activityIndicator" destination="jdW-8M-DLm" id="43n-3Y-8PL"/>
                         <outlet property="highlightTableView" destination="U1G-Dc-tel" id="Vrq-X2-PEZ"/>
-                        <outlet property="startButton" destination="2Ee-Nd-IFQ" id="t17-77-YFb"/>
                     </connections>
                 </viewController>
             </objects>
@@ -88,6 +88,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Decisions" id="Epq-JZ-azb">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="l9a-8K-6hh">
+                            <connections>
+                                <action selector="logout" destination="VC8-Kt-gVe" id="dpP-vL-WVE"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="X3b-J1-33s">
                             <connections>
                                 <segue destination="8Er-VS-Zn1" kind="modal" identifier="addDecisionSegue" id="fZb-e6-dYw"/>
@@ -139,7 +144,13 @@
                             <outlet property="delegate" destination="d7Y-KE-PgS" id="ejL-3T-8gF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recent Decisions" id="Byt-1L-XnP"/>
+                    <navigationItem key="navigationItem" title="Recent Decisions" id="Byt-1L-XnP">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="wJR-28-Au8">
+                            <connections>
+                                <action selector="logout" destination="d7Y-KE-PgS" id="vby-8s-pc3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Kk7-2i-TwX" kind="push" identifier="showDecisionResultSegue" id="cKI-Ly-nna"/>
                     </connections>
@@ -393,52 +404,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button.png" width="572" height="103"/>
         <image name="footer.png" width="30" height="151"/>
-        <image name="login-button-small.png" width="151" height="43"/>
-        <image name="start.png" width="572" height="103"/>
+        <image name="what.png" width="31" height="92"/>
     </resources>
-    <classes>
-        <class className="AddDecisionViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddDecisionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="daysText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="decisionText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="yesNoSwitch" candidateClass="DCRoundSwitch"/>
-            </relationships>
-        </class>
-        <class className="DCRoundSwitch" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DCRoundSwitch.h"/>
-        </class>
-        <class className="DDayAttributionViewController" superclassName="TKCalendarMonthTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DDayAttributionViewController.h"/>
-        </class>
-        <class className="DecisionTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DecisionTableViewController.h"/>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="facebookLogin" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="highlightTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="PostToFacebookViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PostToFacebookViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RecentDecisionTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecentDecisionTableViewController.h"/>
-        </class>
-        <class className="TKCalendarMonthTableViewController" superclassName="TKCalendarMonthViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TKCalendarMonthTableViewController.h"/>
-        </class>
-        <class className="TKCalendarMonthViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TKCalendarMonthViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

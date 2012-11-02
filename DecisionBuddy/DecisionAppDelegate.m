@@ -64,7 +64,8 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
 /*
  * Opens a Facebook session and optionally shows the login UX.
  */
-- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI {
+- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI
+{
     NSArray *permissions = [[NSArray alloc] initWithObjects:
                             @"publish_actions", nil];
     
@@ -93,9 +94,15 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
 }
 
 
--(void)closeFacebookSession
+-(void)closeFacebookSessionWithLoginUI:(BOOL)showLoginScreen
 {
     [[FBSession activeSession] close];
+    
+    if(showLoginScreen)
+    {
+        [self showLoginScreen];
+    }
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -123,24 +130,33 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    NSLog(@"app did become active");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     // this means the user switched back to this app without completing
     // a login in Safari/Facebook App
     
     if (FBSession.activeSession.state == FBSessionStateCreatedOpening) {
-        [self closeFacebookSession];
+        [self closeFacebookSessionWithLoginUI:NO];
     }
     
+    // This should be called by login view controller delegate
     [self initDataOnRootViewController];
+    
+    if(![[FBSession activeSession] isOpen])
+    {
+        [self showLoginScreen];
+    }
+}
 
+-(void)showLoginScreen
+{
     //LoginViewController *loginViewController = [[LoginViewController alloc] init];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     
     
     [self.window.rootViewController presentModalViewController:loginViewController animated:NO];
-    
-        
+
 }
 
 
@@ -188,7 +204,7 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    [self closeFacebookSession];
+    [self closeFacebookSessionWithLoginUI:NO];
 }
 
 @end

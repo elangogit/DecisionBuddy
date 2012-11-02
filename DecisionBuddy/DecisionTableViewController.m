@@ -11,7 +11,7 @@
 #import "AddDecisionViewController.h"
 #import "DecisionTableViewCell.h"
 #import "FilePersistence.h"
-#import "DDayAttributionViewController.h"
+#import "DecisionAppDelegate.h"
 
 @interface DecisionTableViewController () <AddDecisionViewControllerDelegate,DecisionDelegate>
 
@@ -52,6 +52,14 @@
         AddDecisionViewController *addDecisionViewController =  [[[segue destinationViewController] viewControllers] objectAtIndex:0];
         [addDecisionViewController setDelegate:self];
     }
+}
+
+#pragma mark Logout
+
+- (IBAction)logout
+{
+    DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate closeFacebookSessionWithLoginUI:YES];
 }
 
 #pragma mark - Table view data source

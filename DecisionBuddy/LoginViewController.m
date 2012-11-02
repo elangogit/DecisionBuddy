@@ -22,9 +22,8 @@
 
 @implementation LoginViewController
 
-@synthesize startButton = _startButton;
-@synthesize facebookLogin = _facebookLogin;
 @synthesize highlightTableView = _highlightTableView;
+@synthesize activityIndicator = _activityIndicator;
 @synthesize highlightsArray = _highlightsArray;
 
 
@@ -61,25 +60,30 @@
 
 #pragma mark Buttons
 
-- (IBAction)facebookAction:(UIButton *)sender {
+- (IBAction)facebookLogin:(UIButton *)sender
+{
     
     DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     if(FBSession.activeSession.isOpen)
     {
-        [appDelegate closeFacebookSession];
+        // this should never happen
+        NSLog(@"Facebook session was active when user came to login splash, this should comeup only during testing");
+        [appDelegate closeFacebookSessionWithLoginUI:NO];
     }
-    else
-    {
-        [appDelegate openSessionWithAllowLoginUI:YES];
-    }
+    
+    [appDelegate openSessionWithAllowLoginUI:YES];
 }
 
 
-- (IBAction)startTracking {
-    // set user defaults so that this screen doesn't have to be shown again
-    self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self dismissModalViewControllerAnimated:YES];
+- (void)hideLoginSplash
+{
+
+    if(FBSession.activeSession.isOpen)
+    {
+        self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        [self dismissModalViewControllerAnimated:YES];
+    }
     
 }
 
@@ -88,17 +92,11 @@
 
 - (void)viewDidLoad
 {
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(sessionStateChanged:)
-     name:FBSessionStateChangedNotification
-     object:nil];
-    
-    // Check the session for a cached token to show the proper authenticated
-    // UI. However, since this is not user intitiated, do not show the login UX.
-    DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate openSessionWithAllowLoginUI:NO];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(sessionStateChanged:)
+                                                 name:FBSessionStateChangedNotification
+                                               object:nil];
+        
     dispatch_async(backgroundQueue, ^{
         
         NSData* highlights = [NSData dataWithContentsOfURL:highlightsURL];
@@ -106,12 +104,14 @@
         [self performSelectorOnMainThread:@selector(fetchedHighlights:)
                                withObject:highlights waitUntilDone:YES];
     });
-     
+    
+    [self.activityIndicator startAnimating];
         
 }
 
 
-- (void)fetchedHighlights:(NSData *)highlights {
+- (void)fetchedHighlights:(NSData *)highlights
+{
     //parse out the json data
     NSError* error;
     self.highlightsArray = [NSJSONSerialization JSONObjectWithData:highlights
@@ -121,22 +121,27 @@
     NSLog(@"highlights: %@", self.highlightsArray);
     
     [self.highlightTableView reloadData];
+    [self.highlightTableView setHidden:NO];
+    
+    [self.activityIndicator stopAnimating];
     
 }
 
-- (void)viewDidUnload {
-    [self setFacebookLogin:nil];
+- (void)viewDidUnload
+{
+    NSLog(@"removing FB listener and cleanup UI elements");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self setStartButton:nil];
     [self setHighlightTableView:nil];
+    // TODO: should the background job also be cleaned up ?
+    
+    [self setActivityIndicator:nil];
     [super viewDidUnload];
 }
 
-- (void)sessionStateChanged:(NSNotification*)notification {
+- (void)sessionStateChanged:(NSNotification*)notification
+{
     if (FBSession.activeSession.isOpen) {
-        [self.facebookLogin setTitle:@"     Logout" forState:UIControlStateNormal];
-    } else {
-        [self.facebookLogin setTitle:@"      Login" forState:UIControlStateNormal];
+        [self hideLoginSplash];
     }
 }
 @end

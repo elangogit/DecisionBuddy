@@ -9,6 +9,7 @@
 #import "RecentDecisionTableViewController.h"
 #import "FilePersistence.h"
 #import "DDayAttributionViewController.h"
+#import "DecisionAppDelegate.h"
 
 @interface RecentDecisionTableViewController ()
 
@@ -43,6 +44,18 @@
         [dDayViewController setDecisions:[self.store decisionsTakenOn:sender]];
     }
 }
+
+#pragma mark logout
+
+- (IBAction)logout
+{
+    DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate closeFacebookSessionWithLoginUI:YES];
+
+}
+
+
+#pragma mark Table
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

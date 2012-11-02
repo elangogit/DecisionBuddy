@@ -58,6 +58,8 @@
 		EEC93D9315F24F7F0009DF91 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */; };
 		EEC93D9C15F250120009DF91 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */; };
 		EECBF8CE1642ED0000E4B664 /* HighlightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8CD1642ED0000E4B664 /* HighlightsTableViewCell.xib */; };
+		EECBF8D0164393B300E4B664 /* what.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8CF164393B300E4B664 /* what.png */; };
+		EECBF8DC1643A9A100E4B664 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8DB1643A9A100E4B664 /* button.png */; };
 		EEF4A02A15E7AF95009909A8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF4A02915E7AF95009909A8 /* LoginViewController.m */; };
 		EEF5D70415F5CDB900151E6B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */; };
 		EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEF5D70515F5CE4700151E6B /* FacebookSDKResources.bundle */; };
@@ -162,6 +164,8 @@
 		EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../gitspace/cal/tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
 		EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../gitspace/cal/tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		EECBF8CD1642ED0000E4B664 /* HighlightsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighlightsTableViewCell.xib; sourceTree = "<group>"; };
+		EECBF8CF164393B300E4B664 /* what.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = what.png; sourceTree = "<group>"; };
+		EECBF8DB1643A9A100E4B664 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		EEF4A02815E7AF95009909A8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EEF4A02915E7AF95009909A8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 		EE1D732615E918C400CEF7C5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EECBF8DB1643A9A100E4B664 /* button.png */,
+				EECBF8CF164393B300E4B664 /* what.png */,
 				EE0ABB51161AC13800C6FA8F /* iTunesArtwork.png */,
 				EEA84B851635883000C5315F /* login-button-small-pressed.png */,
 				EEA84B861635883000C5315F /* login-button-small-pressed@2x.png */,
@@ -467,6 +473,8 @@
 				EEA84B8B1635883000C5315F /* login-button-small.png in Resources */,
 				EEA84B8C1635883000C5315F /* login-button-small@2x.png in Resources */,
 				EECBF8CE1642ED0000E4B664 /* HighlightsTableViewCell.xib in Resources */,
+				EECBF8D0164393B300E4B664 /* what.png in Resources */,
+				EECBF8DC1643A9A100E4B664 /* button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
