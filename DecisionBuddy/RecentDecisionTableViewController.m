@@ -10,6 +10,7 @@
 #import "FilePersistence.h"
 #import "DDayAttributionViewController.h"
 #import "DecisionAppDelegate.h"
+#import "DateUtil.h"
 
 @interface RecentDecisionTableViewController ()
 
@@ -79,7 +80,7 @@
     Decision *decision = [self.recentDecisions objectAtIndex:indexPath.row];
     
     cell.textLabel.text = decision.point;
-    cell.detailTextLabel.text = @"10 days ago";            
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d days ago", [[decision daysAfterDecision] intValue]];
     cell.tag = indexPath.row;
     
     return cell;

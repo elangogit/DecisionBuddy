@@ -47,4 +47,9 @@
     return [gregorian dateByAddingComponents:offsetComponents toDate:date options:0];
 }
 
++(NSNumber *)daysBeforeTodayAnd:(NSDate *)pastDate
+{
+    return [self daysBetween:pastDate and:[DateUtil midnightToday]];
+}
+
 @end

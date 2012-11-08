@@ -23,6 +23,13 @@
 @synthesize decisionArray = _decisionArray;
 @synthesize store = _store;
 
+-(void) viewDidLoad
+{
+    [super viewDidLoad];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    [self.tableView setBackgroundView:backgroundImageView];
+}
+
 #define ADD_DECISION_SEGUE @"addDecisionSegue"
 
 -(id <DecisionPersistence>)store
@@ -49,7 +56,8 @@
 {
     if([segue.identifier isEqualToString:ADD_DECISION_SEGUE])
     {
-        AddDecisionViewController *addDecisionViewController =  [[[segue destinationViewController] viewControllers] objectAtIndex:0];
+        //AddDecisionViewController *addDecisionViewController =  [[[segue destinationViewController] viewControllers] objectAtIndex:0];
+        AddDecisionViewController *addDecisionViewController =  [segue destinationViewController];
         [addDecisionViewController setDelegate:self];
     }
 }

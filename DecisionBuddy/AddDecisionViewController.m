@@ -18,6 +18,7 @@
 @synthesize decisionText = _decisionText;
 @synthesize daysText = _daysText;
 @synthesize yesNoSwitch = _yesNoSwitch;
+@synthesize tableView = _tableView;
 @synthesize delegate = _delegate;
 
 
@@ -28,6 +29,9 @@
     [self.yesNoSwitch setOffText:@"NO"];
     self.decisionText.delegate = self;
     self.daysText.delegate = self;
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    [self.tableView setBackgroundView:backgroundImageView];
+        
 }
 
 - (IBAction)saveDecision:(UIBarButtonItem *)sender
@@ -103,6 +107,7 @@ replacementString:(NSString *)string
     [self setDecisionText:nil];
     [self setDaysText:nil];
     [self setYesNoSwitch:nil];
+    [self setTableView:nil];
     [super viewDidUnload];
 }
 @end

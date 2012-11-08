@@ -24,5 +24,8 @@
 
 -(NSNumber *)daysLeftToDecideFromToday;
 
+-(NSNumber *)daysAfterDecision;
+
+- (NSComparisonResult)compareByDaysAfterDecision:(Decision *)otherDecision;
 
 @end

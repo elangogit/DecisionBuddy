@@ -17,11 +17,6 @@
 		EE29767216428695000330B4 /* HighlightsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE29767116428695000330B4 /* HighlightsTableViewCell.m */; };
 		EE29767716429376000330B4 /* DecisionHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = EE29767616429376000330B4 /* DecisionHighlight.m */; };
 		EEA84B6E1635684800C5315F /* footer.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA84B6D1635684800C5315F /* footer.png */; };
-		EEA84B841635845F00C5315F /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA84B831635845F00C5315F /* start.png */; };
-		EEA84B891635883000C5315F /* login-button-small-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA84B851635883000C5315F /* login-button-small-pressed.png */; };
-		EEA84B8A1635883000C5315F /* login-button-small-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA84B861635883000C5315F /* login-button-small-pressed@2x.png */; };
-		EEA84B8B1635883000C5315F /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA84B871635883000C5315F /* login-button-small.png */; };
-		EEA84B8C1635883000C5315F /* login-button-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA84B881635883000C5315F /* login-button-small@2x.png */; };
 		EEA84B8F1637BD7900C5315F /* RecentDecisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA84B8E1637BD7900C5315F /* RecentDecisionTableViewController.m */; };
 		EEB2DE75163C41E500D60277 /* DCRoundSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2DE6E163C41E500D60277 /* DCRoundSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EEB2DE76163C41E500D60277 /* DCRoundSwitchKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB2DE70163C41E500D60277 /* DCRoundSwitchKnobLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -46,9 +41,6 @@
 		EEBDB560162C063E0066CFC6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8715F2442E0009DF91 /* QuartzCore.framework */; };
 		EEBDB561162C06560066CFC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256A15E7336800E9B704 /* CoreGraphics.framework */; };
 		EEBDB562162C06A10066CFC6 /* DDayAttributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */; };
-		EEBDB566162EBEC90066CFC6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBDB563162EBEC90066CFC6 /* Default-568h@2x.png */; };
-		EEBDB567162EBEC90066CFC6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBDB564162EBEC90066CFC6 /* Default.png */; };
-		EEBDB568162EBEC90066CFC6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBDB565162EBEC90066CFC6 /* Default@2x.png */; };
 		EEBDB571162ECB750066CFC6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */; };
 		EEBEC36A15E77C7700D60DF5 /* DecisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */; };
 		EEBEC36E15E77D3B00D60DF5 /* Decision.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBEC36D15E77D3B00D60DF5 /* Decision.m */; };
@@ -60,6 +52,10 @@
 		EECBF8CE1642ED0000E4B664 /* HighlightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8CD1642ED0000E4B664 /* HighlightsTableViewCell.xib */; };
 		EECBF8D0164393B300E4B664 /* what.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8CF164393B300E4B664 /* what.png */; };
 		EECBF8DC1643A9A100E4B664 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8DB1643A9A100E4B664 /* button.png */; };
+		EECBF8E0164A92D900E4B664 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8DD164A92D900E4B664 /* Default-568h@2x.png */; };
+		EECBF8E1164A92D900E4B664 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8DE164A92D900E4B664 /* Default.png */; };
+		EECBF8E2164A92D900E4B664 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8DF164A92D900E4B664 /* Default@2x.png */; };
+		EECBF8E4164A9A7E00E4B664 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8E3164A9A7E00E4B664 /* background.png */; };
 		EEF4A02A15E7AF95009909A8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF4A02915E7AF95009909A8 /* LoginViewController.m */; };
 		EEF5D70415F5CDB900151E6B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */; };
 		EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEF5D70515F5CE4700151E6B /* FacebookSDKResources.bundle */; };
@@ -115,11 +111,6 @@
 		EE29767516429375000330B4 /* DecisionHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionHighlight.h; sourceTree = "<group>"; };
 		EE29767616429376000330B4 /* DecisionHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionHighlight.m; sourceTree = "<group>"; };
 		EEA84B6D1635684800C5315F /* footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer.png; sourceTree = "<group>"; };
-		EEA84B831635845F00C5315F /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
-		EEA84B851635883000C5315F /* login-button-small-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small-pressed.png"; sourceTree = "<group>"; };
-		EEA84B861635883000C5315F /* login-button-small-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small-pressed@2x.png"; sourceTree = "<group>"; };
-		EEA84B871635883000C5315F /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small.png"; sourceTree = "<group>"; };
-		EEA84B881635883000C5315F /* login-button-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small@2x.png"; sourceTree = "<group>"; };
 		EEA84B8D1637BD7900C5315F /* RecentDecisionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentDecisionTableViewController.h; sourceTree = "<group>"; };
 		EEA84B8E1637BD7900C5315F /* RecentDecisionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentDecisionTableViewController.m; sourceTree = "<group>"; };
 		EEB2DE6D163C41E500D60277 /* DCRoundSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitch.h; sourceTree = "<group>"; };
@@ -149,9 +140,6 @@
 		EEBDB555162BF8890066CFC6 /* DateUtilTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtilTest.h; sourceTree = "<group>"; };
 		EEBDB556162BF8890066CFC6 /* DateUtilTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtilTest.m; sourceTree = "<group>"; };
 		EEBDB558162BF8890066CFC6 /* DecisionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecisionTests-Prefix.pch"; sourceTree = "<group>"; };
-		EEBDB563162EBEC90066CFC6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		EEBDB564162EBEC90066CFC6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		EEBDB565162EBEC90066CFC6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		EEBDB56D162EC4970066CFC6 /* FacebookSDK */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = FacebookSDK; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/FacebookSDK; sourceTree = "<group>"; };
 		EEBEC36815E77C7700D60DF5 /* DecisionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionTableViewController.h; sourceTree = "<group>"; };
 		EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionTableViewController.m; sourceTree = "<group>"; };
@@ -166,6 +154,10 @@
 		EECBF8CD1642ED0000E4B664 /* HighlightsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighlightsTableViewCell.xib; sourceTree = "<group>"; };
 		EECBF8CF164393B300E4B664 /* what.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = what.png; sourceTree = "<group>"; };
 		EECBF8DB1643A9A100E4B664 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		EECBF8DD164A92D900E4B664 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EECBF8DE164A92D900E4B664 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EECBF8DF164A92D900E4B664 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EECBF8E3164A9A7E00E4B664 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EEF4A02815E7AF95009909A8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EEF4A02915E7AF95009909A8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -210,18 +202,14 @@
 		EE1D732615E918C400CEF7C5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EECBF8E3164A9A7E00E4B664 /* background.png */,
+				EECBF8DD164A92D900E4B664 /* Default-568h@2x.png */,
+				EECBF8DE164A92D900E4B664 /* Default.png */,
+				EECBF8DF164A92D900E4B664 /* Default@2x.png */,
 				EECBF8DB1643A9A100E4B664 /* button.png */,
 				EECBF8CF164393B300E4B664 /* what.png */,
 				EE0ABB51161AC13800C6FA8F /* iTunesArtwork.png */,
-				EEA84B851635883000C5315F /* login-button-small-pressed.png */,
-				EEA84B861635883000C5315F /* login-button-small-pressed@2x.png */,
-				EEA84B871635883000C5315F /* login-button-small.png */,
-				EEA84B881635883000C5315F /* login-button-small@2x.png */,
-				EEA84B831635845F00C5315F /* start.png */,
 				EEA84B6D1635684800C5315F /* footer.png */,
-				EEBDB563162EBEC90066CFC6 /* Default-568h@2x.png */,
-				EEBDB564162EBEC90066CFC6 /* Default.png */,
-				EEBDB565162EBEC90066CFC6 /* Default@2x.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -463,18 +451,14 @@
 				EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */,
 				EE0ABB501615814300C6FA8F /* icon.png in Resources */,
 				EE0ABB52161AC13800C6FA8F /* iTunesArtwork.png in Resources */,
-				EEBDB566162EBEC90066CFC6 /* Default-568h@2x.png in Resources */,
-				EEBDB567162EBEC90066CFC6 /* Default.png in Resources */,
-				EEBDB568162EBEC90066CFC6 /* Default@2x.png in Resources */,
 				EEA84B6E1635684800C5315F /* footer.png in Resources */,
-				EEA84B841635845F00C5315F /* start.png in Resources */,
-				EEA84B891635883000C5315F /* login-button-small-pressed.png in Resources */,
-				EEA84B8A1635883000C5315F /* login-button-small-pressed@2x.png in Resources */,
-				EEA84B8B1635883000C5315F /* login-button-small.png in Resources */,
-				EEA84B8C1635883000C5315F /* login-button-small@2x.png in Resources */,
 				EECBF8CE1642ED0000E4B664 /* HighlightsTableViewCell.xib in Resources */,
 				EECBF8D0164393B300E4B664 /* what.png in Resources */,
 				EECBF8DC1643A9A100E4B664 /* button.png in Resources */,
+				EECBF8E0164A92D900E4B664 /* Default-568h@2x.png in Resources */,
+				EECBF8E1164A92D900E4B664 /* Default.png in Resources */,
+				EECBF8E2164A92D900E4B664 /* Default@2x.png in Resources */,
+				EECBF8E4164A9A7E00E4B664 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

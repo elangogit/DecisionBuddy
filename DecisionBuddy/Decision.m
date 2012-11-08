@@ -10,12 +10,15 @@
 #import "DateUtil.h"
 
 @implementation Decision 
-
+{
+    NSNumber *noOfDaysAfterDecision;
+}
 @synthesize decisionId = _decisionId;
 @synthesize point  = _point;
 @synthesize daysToDecide = _daysToDecide;
 @synthesize inceptionOn = _inceptionOn;
 @synthesize bias = _bias;
+
 
 -(id)initWithId:(int)decisionId
 {
@@ -23,6 +26,7 @@
     if(self)
     {
         _decisionId = decisionId;
+        noOfDaysAfterDecision = nil;
     }
     return self;
     
@@ -38,16 +42,25 @@
         _daysToDecide = days;
         _inceptionOn = inceptionDate;
         _bias = bias;
+        noOfDaysAfterDecision = nil;
         return self;
     }
     return nil;
+}
+
+-(NSNumber *)daysAfterDecision
+{
+    if(noOfDaysAfterDecision == nil)
+    {
+        noOfDaysAfterDecision = [DateUtil daysBeforeTodayAnd:[self decisionDay]];
+    }
+    return noOfDaysAfterDecision;
 }
 
 -(NSDate *)decisionDay
 {
     return [DateUtil dateOnDays:self.daysToDecide from:self.inceptionOn];
 }
-
 
 
 -(NSNumber *)daysLeftToDecideFromToday
@@ -79,6 +92,11 @@
                    inceptionOn:[decoder decodeObjectForKey:INCEPTION_DATE]
                       biasedTo:[decoder decodeBoolForKey:BIAS]];
 
+}
+
+#pragma mark sort utils
+- (NSComparisonResult)compareByDaysAfterDecision:(Decision *)otherDecision {
+    return [[self daysAfterDecision] compare:[otherDecision daysAfterDecision]];
 }
 
 
