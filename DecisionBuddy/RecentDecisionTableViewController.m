@@ -36,13 +36,31 @@
 }
 
 
+-(void) setRecentDecisions:(NSArray *)newRecentDecisions
+{
+    if(_recentDecisions != newRecentDecisions)
+    {
+        _recentDecisions = newRecentDecisions;
+        [self.tableView reloadData];
+    }
+}
+
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    [self.tableView setBackgroundView:backgroundImageView];
+
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:SHOW_DECISION_SEGUE])
     {
         DDayAttributionViewController *dDayViewController = [segue destinationViewController];
         [dDayViewController setDecision:sender];
-        [dDayViewController setDecisions:[self.store decisionsTakenOn:sender]];
+        [dDayViewController setDecisionAttribution:[self.store decisionsTakenOn:sender]];
     }
 }
 
@@ -80,22 +98,27 @@
     Decision *decision = [self.recentDecisions objectAtIndex:indexPath.row];
     
     cell.textLabel.text = decision.point;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d days ago", [[decision daysAfterDecision] intValue]];
+    cell.detailTextLabel.text = [DateUtil humanReadableDifferenceBetweenTodayAnd:decision.decisionDay];
     cell.tag = indexPath.row;
     
     return cell;
 }
 
+/*
+ 
+ This is handled by storyboard now
+ 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     [self performSegueWithIdentifier:SHOW_DECISION_SEGUE sender:[self.recentDecisions objectAtIndex:indexPath.row]];
 }
+ 
 
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
     [self tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
-
+*/
 
 @end

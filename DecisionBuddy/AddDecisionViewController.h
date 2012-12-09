@@ -16,7 +16,6 @@
 
 
 @property (weak, nonatomic) IBOutlet UITextField *decisionText;
-
 @property (weak, nonatomic) IBOutlet UITextField *daysText;
 @property (weak, nonatomic) IBOutlet DCRoundSwitch *yesNoSwitch;
 

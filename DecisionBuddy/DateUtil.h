@@ -15,5 +15,6 @@
 +(NSNumber *)daysBetweenTodayAnd:(NSDate *)anotherDate;
 +(NSDate *)dateOnDays:(NSNumber *)days from:(NSDate *)date;
 +(NSNumber *)daysBeforeTodayAnd:(NSDate *)pastDate;
++(NSString *)humanReadableDifferenceBetweenTodayAnd:(NSDate *)anotherDate;
 
 @end

@@ -66,10 +66,11 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
  */
 - (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI
 {
-    NSArray *permissions = [[NSArray alloc] initWithObjects:
-                            @"publish_actions", nil];
     
-    return [FBSession openActiveSessionWithPermissions:permissions
+    // ask only for email now, ask for posting permissions later
+    NSArray *permissions = [NSArray arrayWithObjects:@"email", nil];
+    
+    return [FBSession openActiveSessionWithReadPermissions:permissions
                                           allowLoginUI:allowLoginUI
                                      completionHandler:^(FBSession *session,
                                                          FBSessionState state,
@@ -131,13 +132,10 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     NSLog(@"app did become active");
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
     // this means the user switched back to this app without completing
     // a login in Safari/Facebook App
-    
-    if (FBSession.activeSession.state == FBSessionStateCreatedOpening) {
-        [self closeFacebookSessionWithLoginUI:NO];
-    }
+    [FBSession.activeSession handleDidBecomeActive];
     
     // This should be called by login view controller delegate
     [self initDataOnRootViewController];
@@ -191,12 +189,17 @@ NSString *const FBSessionStateChangedNotification = @"com.janidea.Decision:FBSes
     
     [persistenceStore alreadyDecidedToday:decisionToBeTakenArray];
     
-    UINavigationController *trackerController = (UINavigationController *) [self.window rootViewController];
-        
+    
+    UITabBarController *tabController = (UITabBarController *) [self.window rootViewController];
+    
+    UINavigationController *trackerController = (UINavigationController *) [[tabController viewControllers] objectAtIndex:0];
+    UINavigationController *recentController = (UINavigationController *) [[tabController viewControllers] objectAtIndex:1];
+    
     [[[trackerController viewControllers] objectAtIndex:0] setDecisionArray:decisionToBeTakenArray];
-/*
+
     [[[recentController viewControllers] objectAtIndex:0] setRecentDecisions:[recentDecisions sortedArrayUsingSelector:@selector(compareByDaysAfterDecision:)]];
-*/
+
+    
     
 }
 

@@ -52,4 +52,28 @@
     return [self daysBetween:pastDate and:[DateUtil midnightToday]];
 }
 
++(NSString *)humanReadableDifferenceBetweenTodayAnd:(NSDate *)anotherDate
+{
+    int noOfDays = [[self daysBetweenTodayAnd:anotherDate] intValue];
+    NSString *englishMeaningOfDifference = [NSString stringWithFormat:@"%d days",noOfDays];
+    if(noOfDays == 0)
+    {
+        englishMeaningOfDifference = @"Today";
+    } else if (noOfDays == -1)
+    {
+        englishMeaningOfDifference = @"Yesterday";
+    } else if (noOfDays == 1)
+    {
+        englishMeaningOfDifference = @"Tomorrow";
+    } else if (noOfDays <= -2)
+    {
+        englishMeaningOfDifference = [NSString stringWithFormat:@"%d days ago",noOfDays*-1 ];
+    } else if (noOfDays >= 2)
+    {
+        englishMeaningOfDifference = [NSString stringWithFormat:@"%d days to go",noOfDays];
+    }
+    
+    return englishMeaningOfDifference;
+}
+
 @end

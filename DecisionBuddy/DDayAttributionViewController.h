@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Decision.h"
-#import <TapkuLibrary/TKCalendarMonthTableViewController.h>
 
-@interface DDayAttributionViewController : TKCalendarMonthTableViewController
+
+@interface DDayAttributionViewController : UIViewController
 
 @property (nonatomic, weak) Decision *decision;
-@property (nonatomic, weak) NSArray *decisions;
+@property (nonatomic, weak) NSArray *decisionAttribution;
 
 
 @end

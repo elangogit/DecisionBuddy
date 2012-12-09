@@ -36,19 +36,17 @@
 		EEBDB554162BF8890066CFC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEBDB552162BF8890066CFC6 /* InfoPlist.strings */; };
 		EEBDB557162BF8890066CFC6 /* DateUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBDB556162BF8890066CFC6 /* DateUtilTest.m */; };
 		EEBDB55C162BF8A20066CFC6 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D732E15EE15FC00CEF7C5 /* DateUtil.m */; };
-		EEBDB55E162C061D0066CFC6 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */; };
-		EEBDB55F162C063E0066CFC6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8515F244220009DF91 /* MapKit.framework */; };
 		EEBDB560162C063E0066CFC6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8715F2442E0009DF91 /* QuartzCore.framework */; };
 		EEBDB561162C06560066CFC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC256A15E7336800E9B704 /* CoreGraphics.framework */; };
 		EEBDB562162C06A10066CFC6 /* DDayAttributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */; };
 		EEBDB571162ECB750066CFC6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */; };
 		EEBEC36A15E77C7700D60DF5 /* DecisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */; };
 		EEBEC36E15E77D3B00D60DF5 /* Decision.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBEC36D15E77D3B00D60DF5 /* Decision.m */; };
-		EEC93D8615F244220009DF91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8515F244220009DF91 /* MapKit.framework */; };
+		EEBF87161674CB3B00E77AD7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBF87131674CB3B00E77AD7 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EEBF87171674CB3B00E77AD7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBF87141674CB3B00E77AD7 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EEBF87181674CB3B00E77AD7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBF87151674CB3B00E77AD7 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EEC93D8815F2442E0009DF91 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D8715F2442E0009DF91 /* QuartzCore.framework */; };
 		EEC93D8B15F24A4A0009DF91 /* DDayAttributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */; };
-		EEC93D9315F24F7F0009DF91 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */; };
-		EEC93D9C15F250120009DF91 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */; };
 		EECBF8CE1642ED0000E4B664 /* HighlightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8CD1642ED0000E4B664 /* HighlightsTableViewCell.xib */; };
 		EECBF8D0164393B300E4B664 /* what.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8CF164393B300E4B664 /* what.png */; };
 		EECBF8DC1643A9A100E4B664 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = EECBF8DB1643A9A100E4B664 /* button.png */; };
@@ -61,37 +59,6 @@
 		EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEF5D70515F5CE4700151E6B /* FacebookSDKResources.bundle */; };
 		EEF5D70915F6221900151E6B /* PostToFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF5D70815F6221900151E6B /* PostToFacebookViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		EEBDB569162EC3B90066CFC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = TapkuLibrary;
-		};
-		EEBDB56B162EC3C50066CFC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = TapkuLibrary;
-		};
-		EEC93D9615F24F800009DF91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = TapkuLibrary;
-		};
-		EEC93D9815F24F800009DF91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
-			remoteInfo = LogicTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EE0ABB391614386C00C6FA8F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -140,17 +107,16 @@
 		EEBDB555162BF8890066CFC6 /* DateUtilTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtilTest.h; sourceTree = "<group>"; };
 		EEBDB556162BF8890066CFC6 /* DateUtilTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtilTest.m; sourceTree = "<group>"; };
 		EEBDB558162BF8890066CFC6 /* DecisionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecisionTests-Prefix.pch"; sourceTree = "<group>"; };
-		EEBDB56D162EC4970066CFC6 /* FacebookSDK */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = FacebookSDK; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/FacebookSDK; sourceTree = "<group>"; };
 		EEBEC36815E77C7700D60DF5 /* DecisionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionTableViewController.h; sourceTree = "<group>"; };
 		EEBEC36915E77C7700D60DF5 /* DecisionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionTableViewController.m; sourceTree = "<group>"; };
 		EEBEC36C15E77D3B00D60DF5 /* Decision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decision.h; sourceTree = "<group>"; };
 		EEBEC36D15E77D3B00D60DF5 /* Decision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Decision.m; sourceTree = "<group>"; };
-		EEC93D8515F244220009DF91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EEBF87131674CB3B00E77AD7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		EEBF87141674CB3B00E77AD7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		EEBF87151674CB3B00E77AD7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EEC93D8715F2442E0009DF91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EEC93D8915F24A4A0009DF91 /* DDayAttributionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDayAttributionViewController.h; sourceTree = "<group>"; };
 		EEC93D8A15F24A4A0009DF91 /* DDayAttributionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDayAttributionViewController.m; sourceTree = "<group>"; };
-		EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../gitspace/cal/tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
-		EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../gitspace/cal/tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		EECBF8CD1642ED0000E4B664 /* HighlightsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighlightsTableViewCell.xib; sourceTree = "<group>"; };
 		EECBF8CF164393B300E4B664 /* what.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = what.png; sourceTree = "<group>"; };
 		EECBF8DB1643A9A100E4B664 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
@@ -171,9 +137,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC93D9C15F250120009DF91 /* libTapkuLibrary.a in Frameworks */,
+				EEBF87161674CB3B00E77AD7 /* Accounts.framework in Frameworks */,
+				EEBF87171674CB3B00E77AD7 /* AdSupport.framework in Frameworks */,
+				EEBF87181674CB3B00E77AD7 /* Social.framework in Frameworks */,
 				EEC93D8815F2442E0009DF91 /* QuartzCore.framework in Frameworks */,
-				EEC93D8615F244220009DF91 /* MapKit.framework in Frameworks */,
 				EEBC256715E7336800E9B704 /* UIKit.framework in Frameworks */,
 				EEBC256915E7336800E9B704 /* Foundation.framework in Frameworks */,
 				EEBC256B15E7336800E9B704 /* CoreGraphics.framework in Frameworks */,
@@ -186,9 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEBDB571162ECB750066CFC6 /* FacebookSDK.framework in Frameworks */,
-				EEBDB55E162C061D0066CFC6 /* libTapkuLibrary.a in Frameworks */,
 				EEBDB561162C06560066CFC6 /* CoreGraphics.framework in Frameworks */,
-				EEBDB55F162C063E0066CFC6 /* MapKit.framework in Frameworks */,
 				EEBDB560162C063E0066CFC6 /* QuartzCore.framework in Frameworks */,
 				EEBDB54C162BF8890066CFC6 /* SenTestingKit.framework in Frameworks */,
 				EEBDB54D162BF8890066CFC6 /* UIKit.framework in Frameworks */,
@@ -232,9 +197,6 @@
 		EEBC255715E7336800E9B704 = {
 			isa = PBXGroup;
 			children = (
-				EEBDB56D162EC4970066CFC6 /* FacebookSDK */,
-				EEC93D8715F2442E0009DF91 /* QuartzCore.framework */,
-				EEC93D8515F244220009DF91 /* MapKit.framework */,
 				EEBC256C15E7336800E9B704 /* DecisionBuddy */,
 				EEBDB54F162BF8890066CFC6 /* DecisionTests */,
 				EEBC256515E7336800E9B704 /* Frameworks */,
@@ -254,10 +216,12 @@
 		EEBC256515E7336800E9B704 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEC93D8715F2442E0009DF91 /* QuartzCore.framework */,
+				EEBF87131674CB3B00E77AD7 /* Accounts.framework */,
+				EEBF87141674CB3B00E77AD7 /* AdSupport.framework */,
+				EEBF87151674CB3B00E77AD7 /* Social.framework */,
 				EEF5D70515F5CE4700151E6B /* FacebookSDKResources.bundle */,
 				EEF5D70315F5CDB900151E6B /* FacebookSDK.framework */,
-				EEC93D8C15F24F7F0009DF91 /* TapkuLibrary.bundle */,
-				EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */,
 				EEBC256615E7336800E9B704 /* UIKit.framework */,
 				EEBC256815E7336800E9B704 /* Foundation.framework */,
 				EEBC256A15E7336800E9B704 /* CoreGraphics.framework */,
@@ -339,15 +303,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EEC93D8E15F24F7F0009DF91 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */,
-				EEC93D9915F24F800009DF91 /* LogicTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,7 +317,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				EEBDB56A162EC3B90066CFC6 /* PBXTargetDependency */,
 			);
 			name = DecisionBuddy;
 			productName = DecisionBuddy;
@@ -381,7 +335,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				EEBDB56C162EC3C50066CFC6 /* PBXTargetDependency */,
 			);
 			name = DecisionTests;
 			productName = DecisionTests;
@@ -408,12 +361,6 @@
 			mainGroup = EEBC255715E7336800E9B704;
 			productRefGroup = EEBC256315E7336800E9B704 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = EEC93D8E15F24F7F0009DF91 /* Products */;
-					ProjectRef = EEC93D8D15F24F7F0009DF91 /* TapkuLibrary.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				EEBC256115E7336800E9B704 /* DecisionBuddy */,
@@ -421,23 +368,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		EEC93D9715F24F800009DF91 /* libTapkuLibrary.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTapkuLibrary.a;
-			remoteRef = EEC93D9615F24F800009DF91 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EEC93D9915F24F800009DF91 /* LogicTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = LogicTests.octest;
-			remoteRef = EEC93D9815F24F800009DF91 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EEBC256015E7336800E9B704 /* Resources */ = {
@@ -447,7 +377,6 @@
 				EEBC257115E7336800E9B704 /* InfoPlist.strings in Resources */,
 				EEBC257A15E7336800E9B704 /* MainStoryboard.storyboard in Resources */,
 				EE1D731915E8C2A400CEF7C5 /* DecisionTableViewCell.xib in Resources */,
-				EEC93D9315F24F7F0009DF91 /* TapkuLibrary.bundle in Resources */,
 				EEF5D70615F5CE4700151E6B /* FacebookSDKResources.bundle in Resources */,
 				EE0ABB501615814300C6FA8F /* icon.png in Resources */,
 				EE0ABB52161AC13800C6FA8F /* iTunesArtwork.png in Resources */,
@@ -526,19 +455,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EEBDB56A162EC3B90066CFC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TapkuLibrary;
-			targetProxy = EEBDB569162EC3B90066CFC6 /* PBXContainerItemProxy */;
-		};
-		EEBDB56C162EC3C50066CFC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TapkuLibrary;
-			targetProxy = EEBDB56B162EC3C50066CFC6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EEBC256F15E7336800E9B704 /* InfoPlist.strings */ = {

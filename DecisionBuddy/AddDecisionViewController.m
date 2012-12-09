@@ -18,7 +18,6 @@
 @synthesize decisionText = _decisionText;
 @synthesize daysText = _daysText;
 @synthesize yesNoSwitch = _yesNoSwitch;
-@synthesize tableView = _tableView;
 @synthesize delegate = _delegate;
 
 
@@ -34,7 +33,7 @@
         
 }
 
-- (IBAction)saveDecision:(UIBarButtonItem *)sender
+- (IBAction)saveDecision
 {
 
     if([[self.decisionText text] length] == 0)
@@ -61,11 +60,10 @@
     }
     
     [self.delegate addDecisionViewControllerDidFinish:self point:[self.decisionText text] daysToDecide:[NSNumber numberWithInt:daysToDecide] biasedTo:[self.yesNoSwitch isOn]];
-
 }
 
 
-- (IBAction)cancelDecision:(UIBarButtonItem *)sender
+- (IBAction)cancelDecision
 {
     [self.delegate addDecisionViewControllerDidCancel:self];
 }
@@ -107,7 +105,6 @@ replacementString:(NSString *)string
     [self setDecisionText:nil];
     [self setDaysText:nil];
     [self setYesNoSwitch:nil];
-    [self setTableView:nil];
     [super viewDidUnload];
 }
 @end

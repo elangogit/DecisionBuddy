@@ -26,7 +26,7 @@ typedef enum  { VOTED_YES, VOTED_NO, NOT_DECIDED } FinalDecision;
 @implementation DDayAttributionViewController
 
 @synthesize decision = _decision;
-@synthesize decisions = _decisions;
+@synthesize decisionAttribution = _decisionAttribution;
 @synthesize decisionTaken = _decisionTaken;
 
 #define FACEBOOK_ROW 2
@@ -41,7 +41,7 @@ typedef enum  { VOTED_YES, VOTED_NO, NOT_DECIDED } FinalDecision;
     
     FinalDecision decisionTaken;
         
-    for(DecisionOnADay *decisionOnADay in self.decisions)
+    for(DecisionOnADay *decisionOnADay in self.decisionAttribution)
     {
         if (decisionOnADay.mindSays)
         {
@@ -76,7 +76,6 @@ typedef enum  { VOTED_YES, VOTED_NO, NOT_DECIDED } FinalDecision;
 {
     [super viewDidLoad];
     self.decisionTaken = [self whatWasDecided];
-    [self.monthView selectDate:[self.decision decisionDay]];
     
 }
 
@@ -183,33 +182,6 @@ typedef enum  { VOTED_YES, VOTED_NO, NOT_DECIDED } FinalDecision;
 }
 
 
-- (NSArray*) calendarMonthView:(TKCalendarMonthView*)monthView marksFromDate:(NSDate*)startDate toDate:(NSDate*)lastDate
-{
-    NSInteger days = [[DateUtil daysBetween:startDate and:lastDate] integerValue] + 1;
-    NSMutableArray *markedArray = nil;
-    NSDate *decisionStartDate = self.decision.inceptionOn;
-    NSDate *decisionEndDate = [self.decision decisionDay];
-    
-    // if there is overlap
-    if (!([decisionEndDate compare:startDate] == NSOrderedAscending || [lastDate compare:decisionStartDate] == NSOrderedAscending)) {
-        
-        markedArray = [self nothingToMarkForDays:days];
-        
-        int daysOffset = [[DateUtil daysBetween:startDate and:decisionStartDate] integerValue];
-        if (daysOffset < 0) {
-            daysOffset = 0;
-        }
-        NSDate *markerStartDate = [DateUtil dateOnDays:[NSNumber numberWithInt:daysOffset] from:startDate];
-        int overlapDays = [[DateUtil daysBetween:markerStartDate and:decisionEndDate] integerValue] + daysOffset;
-        
-        for (int overlapDay = daysOffset; (overlapDay < days && overlapDay < overlapDays) ; overlapDay = overlapDay + 1) {
-            [markedArray replaceObjectAtIndex:overlapDay withObject:[NSNumber numberWithBool:YES]];
-        }
-        
-    }
-    
-    return markedArray;
-}
 
 -(NSMutableArray *)nothingToMarkForDays:(int)days
 {

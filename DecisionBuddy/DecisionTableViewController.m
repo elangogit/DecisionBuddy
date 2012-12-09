@@ -12,6 +12,7 @@
 #import "DecisionTableViewCell.h"
 #import "FilePersistence.h"
 #import "DecisionAppDelegate.h"
+#import "DateUtil.h"
 
 @interface DecisionTableViewController () <AddDecisionViewControllerDelegate,DecisionDelegate>
 
@@ -47,6 +48,7 @@
     if(_decisionArray != newDecisionArray)
     {
         _decisionArray = [newDecisionArray mutableCopy];
+        [self.tableView reloadData];
     }
 }
 
@@ -56,8 +58,7 @@
 {
     if([segue.identifier isEqualToString:ADD_DECISION_SEGUE])
     {
-        //AddDecisionViewController *addDecisionViewController =  [[[segue destinationViewController] viewControllers] objectAtIndex:0];
-        AddDecisionViewController *addDecisionViewController =  [segue destinationViewController];
+        AddDecisionViewController *addDecisionViewController =  (AddDecisionViewController *) [[(UINavigationController *)[segue destinationViewController] viewControllers] objectAtIndex:0];
         [addDecisionViewController setDelegate:self];
     }
 }
@@ -79,7 +80,6 @@
         return self.decisionArray.count;
 }
 
-#define DAYS_TO_GO @" days to go"
 #define DECISION_CELL @"DecisionTableViewCell"
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -102,9 +102,7 @@
     
         [cell.decisionText setText:decision.point];
     
-        NSString *daysToGo =  [decision.daysLeftToDecideFromToday stringValue];
-    
-        [cell.daysToGo setText:[daysToGo stringByAppendingString:DAYS_TO_GO]];
+        [cell.daysToGo setText:[DateUtil humanReadableDifferenceBetweenTodayAnd:decision.decisionDay]];
     
         [cell.yesNoSwitch setOn:[decisionOnADay mindSays]];
         
@@ -148,8 +146,7 @@
 
 }
 
-#pragma mark - Decision Delegate
-
+#pragma mark - 
 -(void)decisionTakenOn:(DecisionTableViewCell *)decision
                     as:(BOOL)decided
 {
