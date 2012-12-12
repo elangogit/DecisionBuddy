@@ -63,13 +63,6 @@
     }
 }
 
-#pragma mark Logout
-
-- (IBAction)logout
-{
-    DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate closeFacebookSessionWithLoginUI:YES];
-}
 
 #pragma mark - Table view data source
 

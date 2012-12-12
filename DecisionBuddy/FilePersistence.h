@@ -18,6 +18,11 @@
 -(void)alreadyDecidedToday:(NSMutableArray *)decisionsToBeTakenToday;
 -(void)cacheRecentDecisions:(NSArray *)recentDecisions;
 -(NSArray *)decisionsTakenOn:(Decision *)aDecision;
+-(void)persistHighlights:(NSArray *)highlights;
+-(NSArray *)highlights;
+
+
+-(void)clearDecisionsAndInstallSeedData;
 
 @end
 

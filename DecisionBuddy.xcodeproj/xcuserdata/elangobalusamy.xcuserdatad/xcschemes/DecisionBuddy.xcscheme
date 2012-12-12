@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EEBC256115E7336800E9B704"
-               BuildableName = "DecisionBuddy.app"
+               BuildableName = "Dezide.app"
                BlueprintName = "DecisionBuddy"
                ReferencedContainer = "container:DecisionBuddy.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EEBC256115E7336800E9B704"
-            BuildableName = "DecisionBuddy.app"
+            BuildableName = "Dezide.app"
             BlueprintName = "DecisionBuddy"
             ReferencedContainer = "container:DecisionBuddy.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EEBC256115E7336800E9B704"
-            BuildableName = "DecisionBuddy.app"
+            BuildableName = "Dezide.app"
             BlueprintName = "DecisionBuddy"
             ReferencedContainer = "container:DecisionBuddy.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EEBC256115E7336800E9B704"
-            BuildableName = "DecisionBuddy.app"
+            BuildableName = "Dezide.app"
             BlueprintName = "DecisionBuddy"
             ReferencedContainer = "container:DecisionBuddy.xcodeproj">
          </BuildableReference>

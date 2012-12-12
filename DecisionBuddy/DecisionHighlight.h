@@ -7,13 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Decision.h"
+
+@class Decision;
 
 @interface DecisionHighlight : NSObject
 
 @property (weak, nonatomic) NSString *decisionPoint;
-@property  short count;
-@property (weak, nonatomic) NSString *recentUsers;
+@property (weak, nonatomic) NSString *finalDecision;
+@property (nonatomic) short yesVotes;
+@property (nonatomic) short noVotes;
 
 +(DecisionHighlight *) fromDictionary:(NSDictionary *)dictionary;
+
+-(id)initWithDecision:(Decision *)decision decisionAttribution:(NSArray *)decisionOnDays;
+-(id)initWithDecision:(NSString *)point final:(NSString *)decision yesVotes:(int)yes noVotes:(int)no;
+
+-(short)totalVotes;
 
 @end

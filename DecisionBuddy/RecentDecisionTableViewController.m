@@ -58,19 +58,13 @@
 {
     if([segue.identifier isEqualToString:SHOW_DECISION_SEGUE])
     {
+        NSIndexPath *selectedIndexPath = [[self tableView] indexPathForSelectedRow];
+        Decision *selectedDecision = [self.recentDecisions objectAtIndex:selectedIndexPath.row];
+        
         DDayAttributionViewController *dDayViewController = [segue destinationViewController];
-        [dDayViewController setDecision:sender];
-        [dDayViewController setDecisionAttribution:[self.store decisionsTakenOn:sender]];
+        [dDayViewController setDecision:selectedDecision];
+        [dDayViewController setDecisionAttribution:[self.store decisionsTakenOn:selectedDecision]];
     }
-}
-
-#pragma mark logout
-
-- (IBAction)logout
-{
-    DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate closeFacebookSessionWithLoginUI:YES];
-
 }
 
 

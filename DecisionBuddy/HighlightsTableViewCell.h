@@ -12,8 +12,10 @@
 @interface HighlightsTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *decisionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *finalDecision;
+@property (weak, nonatomic) IBOutlet UIProgressView *decisionProgress;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
-@property (weak, nonatomic) IBOutlet UILabel *whoLabel;
+
 
 -(void)setDecision:(DecisionHighlight *) decision;
 

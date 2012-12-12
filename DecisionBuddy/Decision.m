@@ -68,6 +68,12 @@
     return [DateUtil daysBetweenTodayAnd:[self decisionDay]];
 }
 
+
+-(DecisionHighlight *)whatWasDecided:(NSArray *)decisionOnDays
+{
+    return [[DecisionHighlight alloc] initWithDecision:self decisionAttribution:decisionOnDays];
+}
+
 #pragma mark - NSCoding
 
 #define DECISION_ID @"did"

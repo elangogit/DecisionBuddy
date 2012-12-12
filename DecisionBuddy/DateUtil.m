@@ -10,7 +10,7 @@
 
 @implementation DateUtil
 
-+(NSDate *)midnightToday
++(NSDate *)startOfToday
 {
     unsigned int flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
     NSCalendar* calendar = [NSCalendar currentCalendar];
@@ -23,9 +23,8 @@
 +(NSNumber *)daysBetween:(NSDate *)startDate and:(NSDate *)endDate
 {
     
-    NSCalendar *gregorian = [[NSCalendar alloc]
-                             initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *daysLeft =  [gregorian components:NSDayCalendarUnit
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *daysLeft =  [calendar components:NSDayCalendarUnit
                                                fromDate:startDate
                                                  toDate:endDate
                                                 options:0 ];
@@ -35,21 +34,20 @@
 
 +(NSNumber *)daysBetweenTodayAnd:(NSDate *)anotherDate
 {
-    return [self daysBetween:[DateUtil midnightToday] and:anotherDate];
+    return [self daysBetween:[DateUtil startOfToday] and:anotherDate];
 }
 
 +(NSDate *)dateOnDays:(NSNumber *)days from:(NSDate *)date
 {
-    NSCalendar *gregorian = [[NSCalendar alloc]
-                         initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setDay:[days integerValue]];
-    return [gregorian dateByAddingComponents:offsetComponents toDate:date options:0];
+    return [calendar dateByAddingComponents:offsetComponents toDate:date options:0];
 }
 
 +(NSNumber *)daysBeforeTodayAnd:(NSDate *)pastDate
 {
-    return [self daysBetween:pastDate and:[DateUtil midnightToday]];
+    return [self daysBetween:pastDate and:[DateUtil startOfToday]];
 }
 
 +(NSString *)humanReadableDifferenceBetweenTodayAnd:(NSDate *)anotherDate

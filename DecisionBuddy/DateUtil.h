@@ -10,7 +10,7 @@
 
 @interface DateUtil : NSObject
 
-+(NSDate *)midnightToday;
++(NSDate *)startOfToday;
 +(NSNumber *)daysBetween:(NSDate *)startDate and:(NSDate *)endDate;
 +(NSNumber *)daysBetweenTodayAnd:(NSDate *)anotherDate;
 +(NSDate *)dateOnDays:(NSNumber *)days from:(NSDate *)date;

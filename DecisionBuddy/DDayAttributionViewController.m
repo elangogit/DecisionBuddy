@@ -11,15 +11,11 @@
 #import "DateUtil.h"
 #import "Decision.h"
 #import "DecisionOnADay.h"
-#import "DecisionAppDelegate.h"
-#import <FacebookSDK/FacebookSDK.h>
-#import "PostToFacebookViewController.h"
+#import "FacebookTalker.h"
 
 @interface DDayAttributionViewController ()
 
-typedef enum  { VOTED_YES, VOTED_NO, NOT_DECIDED } FinalDecision;
-
-@property (nonatomic) FinalDecision decisionTaken;
+@property (nonatomic) DecisionHighlight *highlight;
 
 @end
 
@@ -27,90 +23,84 @@ typedef enum  { VOTED_YES, VOTED_NO, NOT_DECIDED } FinalDecision;
 
 @synthesize decision = _decision;
 @synthesize decisionAttribution = _decisionAttribution;
-@synthesize decisionTaken = _decisionTaken;
+@synthesize highlight = _highlight;
 
-#define FACEBOOK_ROW 2
 #define FACEBOOK_SEGUE @"postToFacebook"
-
-
--(FinalDecision)whatWasDecided
-{
-    int yesVotes = 0;
-    int totalVotes = [self.decision.daysToDecide integerValue];
-    int halfMark = totalVotes/2;
-    
-    FinalDecision decisionTaken;
-        
-    for(DecisionOnADay *decisionOnADay in self.decisionAttribution)
-    {
-        if (decisionOnADay.mindSays)
-        {
-            yesVotes = yesVotes + 1;
-        }
-    }
-    
-    // Use bias for days without votes
-    int biasVotes = totalVotes - yesVotes;
-    if (self.decision.bias)
-    {
-        yesVotes = yesVotes + biasVotes;
-    }
-    
-    if (yesVotes > halfMark)
-    {
-        decisionTaken = VOTED_YES;
-    }
-    else if ((totalVotes - yesVotes) > halfMark)
-    {
-        decisionTaken = VOTED_NO;
-    }
-    else
-    {
-        decisionTaken = NOT_DECIDED;
-    }
-    
-    return  decisionTaken;
-}
 
 -(void)viewDidLoad
 {
-    [super viewDidLoad];
-    self.decisionTaken = [self whatWasDecided];
     
-}
+    [super viewDidLoad];
+    self.highlight = [[DecisionHighlight alloc] initWithDecision:self.decision decisionAttribution:self.decisionAttribution];
+    
+    self.pointLabel.text = self.highlight.decisionPoint;
 
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:FACEBOOK_SEGUE])
+    static UIColor *fern, *salmon;
+    if(fern == nil)
     {
-        PostToFacebookViewController *postToFacebookViewController =  [segue destinationViewController];
-        
-        [postToFacebookViewController setStatus:[self facbookMessage]];
-        
+        fern = [UIColor colorWithRed:0.25 green:0.5 blue:0 alpha:1];
+        salmon = [UIColor colorWithRed:1 green:102/256 blue:102/256 alpha:1];
+    }
+    
+    int highVotes;
+    if([@"YES" isEqualToString:[self.highlight.finalDecision uppercaseString]])
+    {
+        highVotes = self.highlight.yesVotes;
+        [self.decisionProgress setProgressTintColor:fern];
+        [self.decisionProgress setTrackTintColor:salmon];
+        [self.finalDecisionLabel setTextColor:fern];
+    }
+    else
+    {
+        highVotes = self.highlight.noVotes;
+        [self.decisionProgress setProgressTintColor:salmon];
+        [self.decisionProgress setTrackTintColor:fern];
+        [self.finalDecisionLabel setTextColor:salmon];
     }
 
+    self.finalDecisionLabel.text = self.highlight.finalDecision;
+
+    self.scoreLabel.text = [NSString stringWithFormat:@" %d / %d ",highVotes,self.highlight.totalVotes];
+    [self.decisionProgress setProgress:(highVotes/(float)self.highlight.totalVotes) animated:YES];
+
+    
+    /*
+    AttributionHighlightTableDataDelegate *highlightSource = [[AttributionHighlightTableDataDelegate alloc] init];
+    [highlightSource setHighlights:[NSArray arrayWithObject:self.highlight]];
+
+    //------------------//
+    // When the below line is commented, the app runs without crashing, even during debug, app crashes even viewDidLoad is called
+    //------------------//
+    [self.highlightTableView setDataSource:highlightSource];
+    [self.highlightTableView setDelegate:highlightSource];
+    */
 }
+
 
 -(void)viewDidUnload
 {
+    [self setPointLabel:nil];
+    [self setFinalDecisionLabel:nil];
+    [self setDecisionProgress:nil];
+    [self setScoreLabel:nil];
     [super viewDidUnload];
 }
 
 -(NSString *)descriptionPrefix
 {
     NSString *decisionIndicator;
-    switch (self.decisionTaken) {
-        case VOTED_YES:
+    NSString *finalDecision = self.highlight.finalDecision;
+    if([@"YES" isEqualToString:[finalDecision uppercaseString]])
+    {
             decisionIndicator = @"decided to";
-            break;
-        case VOTED_NO:
+    }
+    else if([@"NO" isEqualToString:[finalDecision uppercaseString]])
+    {
             decisionIndicator = @"decided not to";
-            break;
-        case NOT_DECIDED:
+    }
+    else
+    {
             decisionIndicator = @"couldn't decide to";
-        default:
-            break;
     }
     return decisionIndicator;
 }
@@ -122,77 +112,50 @@ typedef enum  { VOTED_YES, VOTED_NO, NOT_DECIDED } FinalDecision;
     
 }
 
--(NSString *)decisionMessage
-{
-    return [NSString stringWithFormat:@"You %@ %@",[self descriptionPrefix],self.decision.point] ;
-    
-}
-
-
 
 #pragma mark - TableView Delegate & Data Source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (FBSession.activeSession.isOpen)
-    {
-        return 3;
-    }
-    return 2;
+    return self.decisionAttribution.count;
 }
 
+#define ATTRIBUTION_CELL_IDENTIFIED @"AttributionCell"
 
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    static NSString *CellIdentifier = @"DDayCell";
+    static NSDateFormatter *shortDateFormat = nil;
+    if(shortDateFormat == nil)
+    {
+        shortDateFormat = [[NSDateFormatter alloc] init];
+        shortDateFormat.dateStyle = NSDateFormatterMediumStyle;
+        shortDateFormat.timeStyle = NSDateFormatterNoStyle;
+    }
     
-    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:ATTRIBUTION_CELL_IDENTIFIED];
     if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ATTRIBUTION_CELL_IDENTIFIED];
     }
     
-    if(indexPath.row == 1)
+    DecisionOnADay *decisionOnADay = [self.decisionAttribution objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [shortDateFormat stringFromDate:decisionOnADay.day];
+    if(decisionOnADay.mindSays)
     {
-        [cell.textLabel setText:[self decisionMessage]];
-        [cell.detailTextLabel setText:[NSString stringWithFormat:@"In %d days",[self.decision.daysToDecide integerValue]]];
+        cell.detailTextLabel.text = @"Yes";
     }
-    else if(indexPath.row == FACEBOOK_ROW)
+    else
     {
-        [cell.textLabel setText:@"Post to Facebook"];
-        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        cell.detailTextLabel.text = @"No";
     }
 	
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (IBAction)shareDecision:(id)sender
 {
-    NSLog(@" selected row was %@",indexPath);
-    if(indexPath.row == FACEBOOK_ROW)
-    {
-        // check if active fb session is available, otherwise login
-        if ([[FBSession activeSession] isOpen])
-        {
-            [self performSegueWithIdentifier:FACEBOOK_SEGUE sender:self];
-        }        
-    }
-    
+    [[FacebookTalker sharedInstance] postMessage:[self facbookMessage] sender:self];
 }
-
-
-
--(NSMutableArray *)nothingToMarkForDays:(int)days
-{
-    NSMutableArray *markedArray = [NSMutableArray arrayWithCapacity:days];
-
-    for (int index=0; index < days ; index = index + 1) {
-        [markedArray addObject:[NSNumber numberWithBool:NO]];
-    }
-    
-    return markedArray;
-}
-
-
 @end

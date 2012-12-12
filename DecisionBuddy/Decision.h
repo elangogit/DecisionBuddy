@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DecisionHighlight.h"
+
+@class DecisionHighlight;
 
 @interface Decision : NSObject <NSCoding>
 
@@ -27,5 +30,7 @@
 -(NSNumber *)daysAfterDecision;
 
 - (NSComparisonResult)compareByDaysAfterDecision:(Decision *)otherDecision;
+
+-(DecisionHighlight *)whatWasDecided:(NSArray *)decisionOnDays;
 
 @end

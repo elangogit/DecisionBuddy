@@ -10,12 +10,8 @@
 
 @interface DecisionAppDelegate : UIResponder <UIApplicationDelegate>
 
-extern NSString *const FBSessionStateChangedNotification;
 
 @property (strong, nonatomic) UIWindow *window;
 
--(BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
-
--(void)closeFacebookSessionWithLoginUI:(BOOL)showLoginScreen;
 
 @end

@@ -51,40 +51,12 @@
         cell = [nib objectAtIndex:0];
     }
     
-    DecisionHighlight *highlight = [DecisionHighlight fromDictionary:[self.highlightsArray objectAtIndex:indexPath.row]];
+    //DecisionHighlight *highlight = [DecisionHighlight fromDictionary:[self.highlightsArray objectAtIndex:indexPath.row]];
+    DecisionHighlight *highlight = [self.highlightsArray objectAtIndex:indexPath.row];
     
     [cell setDecision:highlight];
     
     return cell;
-}
-
-#pragma mark Buttons
-
-- (IBAction)facebookLogin:(UIButton *)sender
-{
-    
-    DecisionAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    if(FBSession.activeSession.isOpen)
-    {
-        // this should never happen
-        NSLog(@"Facebook session was active when user came to login splash, this should comeup only during testing");
-        [appDelegate closeFacebookSessionWithLoginUI:NO];
-    }
-    
-    [appDelegate openSessionWithAllowLoginUI:YES];
-}
-
-
-- (void)hideLoginSplash
-{
-
-    if(FBSession.activeSession.isOpen)
-    {
-        self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-        [self dismissModalViewControllerAnimated:YES];
-    }
-    
 }
 
 
@@ -92,11 +64,8 @@
 
 - (void)viewDidLoad
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(sessionStateChanged:)
-                                                 name:FBSessionStateChangedNotification
-                                               object:nil];
-        
+    
+    /*
     dispatch_async(backgroundQueue, ^{
         
         NSData* highlights = [NSData dataWithContentsOfURL:highlightsURL];
@@ -106,7 +75,22 @@
     });
     
     [self.activityIndicator startAnimating];
-        
+     */
+    
+    [self setHighlightsArray: [NSArray
+                               arrayWithObjects:[[DecisionHighlight alloc] initWithDecision:@"Buy iPad Mini without waiting for retina" final:@"Yes" yesVotes:20 noVotes:5],
+                               [[DecisionHighlight alloc] initWithDecision:@"Join yoga classes" final:@"Yes" yesVotes:7 noVotes:2],
+                               [[DecisionHighlight alloc] initWithDecision:@"Vacation to Bali during chrismas" final:@"No" yesVotes:2 noVotes:5],
+                               [[DecisionHighlight alloc] initWithDecision:@"Buy Windows Phone" final:@"No" yesVotes:0 noVotes:15],
+                               [[DecisionHighlight alloc] initWithDecision:@"Marry my girlfriend" final:@"Yes" yesVotes:20 noVotes:5],
+                               nil]];
+    
+    //[self.highlightTableView reloadData];
+    
+
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    [self.highlightTableView setBackgroundView:backgroundImageView];
+    
 }
 
 
@@ -114,13 +98,21 @@
 {
     //parse out the json data
     NSError* error;
-    self.highlightsArray = [NSJSONSerialization JSONObjectWithData:highlights
-                                                              options:kNilOptions
-                                                                error:&error];
     
-    NSLog(@"highlights: %@", self.highlightsArray);
-    
-    [self.highlightTableView reloadData];
+    if(highlights)
+    {
+        self.highlightsArray = [NSJSONSerialization JSONObjectWithData:highlights
+                                                                  options:kNilOptions
+                                                                    error:&error];
+        
+        NSMutableArray *mArray =  [self.highlightsArray mutableCopy];
+        [mArray addObjectsFromArray:self.highlightsArray];
+        self.highlightsArray = [mArray copy];
+        
+        NSLog(@"highlights: %@", self.highlightsArray);
+        
+        [self.highlightTableView reloadData];
+    }
     [self.highlightTableView setHidden:NO];
     
     [self.activityIndicator stopAnimating];
@@ -129,19 +121,8 @@
 
 - (void)viewDidUnload
 {
-    NSLog(@"removing FB listener and cleanup UI elements");
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self setHighlightTableView:nil];
-    // TODO: should the background job also be cleaned up ?
-    
     [self setActivityIndicator:nil];
     [super viewDidUnload];
-}
-
-- (void)sessionStateChanged:(NSNotification*)notification
-{
-    if (FBSession.activeSession.isOpen) {
-        [self hideLoginSplash];
-    }
 }
 @end
